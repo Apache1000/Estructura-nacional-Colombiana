@@ -43,11 +43,11 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: var(--bg-dark);
       color: var(--text-light);
-      line-height: 1.45;
+      line-height: 1.55;
       overflow-x: hidden;
     }
 
-    /* TOPBAR */
+    /* TOPBAR LIMPIA */
     .topbar {
       background-color: var(--bg-header);
       border-bottom: 1px solid #262926;
@@ -57,9 +57,9 @@
     }
 
     .topbar-inner {
-      max-width: 1060px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 0.9rem 1.5rem;
+      padding: 1rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -70,16 +70,16 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.65rem;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.02rem;
       color: var(--text-light);
       text-decoration: none;
     }
 
     .brand-badge {
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       border: 1.5px solid var(--zone-01);
       display: grid;
@@ -92,14 +92,13 @@
       list-style: none;
       display: flex;
       align-items: center;
-      gap: 1.4rem;
-      flex-wrap: wrap;
+      gap: 1.5rem;
     }
 
     .nav-links a {
       text-decoration: none;
       color: var(--text-muted);
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       font-weight: 600;
       transition: color 0.2s;
     }
@@ -111,37 +110,38 @@
 
     .nav-links a.active {
       border-bottom: 2px solid var(--zone-01);
-      padding-bottom: 3px;
+      padding-bottom: 4px;
     }
 
-    /* HERO */
+    /* HERO CON ESPACIO AMPLIO */
     .hero {
       background-color: var(--bg-header);
-      padding: 2.5rem 1.5rem 2.75rem;
+      padding: 3.5rem 1.5rem 3.75rem;
     }
 
     .hero-inner {
-      max-width: 1060px;
+      max-width: 1080px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
       align-items: center;
-      gap: 2rem;
+      gap: 2.5rem;
     }
 
     .hero h1 {
-      font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+      font-size: clamp(2.15rem, 4.2vw, 3.2rem);
       font-weight: 800;
-      line-height: 1.08;
+      line-height: 1.1;
       letter-spacing: -0.02em;
       text-transform: uppercase;
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
     }
 
     .hero p {
       color: var(--text-muted);
-      font-size: 0.98rem;
-      margin-bottom: 1.4rem;
+      font-size: 1.02rem;
+      margin-bottom: 1.75rem;
+      max-width: 540px;
     }
 
     .btn-hero {
@@ -151,9 +151,9 @@
       background-color: var(--lime-btn);
       color: var(--lime-btn-text);
       font-weight: 800;
-      font-size: 0.88rem;
-      padding: 0.65rem 1.15rem;
-      border-radius: 6px;
+      font-size: 0.92rem;
+      padding: 0.78rem 1.35rem;
+      border-radius: 7px;
       text-decoration: none;
       transition: transform 0.2s, filter 0.2s;
     }
@@ -165,22 +165,22 @@
 
     .hero-graphic svg {
       width: 100%;
-      max-width: 340px;
+      max-width: 350px;
       height: auto;
       display: block;
       margin: 0 auto;
     }
 
-    /* CONTENEDOR DE FRANJAS DE COLOR */
+    /* CONTENEDOR DE FRANJAS */
     .layers-wrapper {
-      max-width: 1060px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 0 1.25rem 2rem;
+      padding: 1.5rem 1.25rem 3.5rem;
     }
 
     .color-layer {
-      border-radius: 18px;
-      padding: 1.4rem 1.5rem 1.6rem;
+      border-radius: 20px;
+      padding: 2rem 1.75rem 2.2rem;
       position: relative;
       border: 2px solid transparent;
     }
@@ -210,14 +210,11 @@
     }
 
     .layer-title {
-      font-size: 1.05rem;
+      font-size: 1.12rem;
       font-weight: 800;
       letter-spacing: 0.02em;
       text-transform: uppercase;
-      margin-bottom: 1.1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      margin-bottom: 1.45rem;
     }
 
     .layer-01 .layer-title {
@@ -228,37 +225,38 @@
     .cards-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1.3rem;
+      gap: 1.5rem;
     }
 
     .cards-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.15rem;
+      gap: 1.35rem;
     }
 
     .cards-5 {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0.85rem;
+      grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+      gap: 1.15rem;
     }
 
-    /* TARJETAS OSCURAS INTERNAS */
+    /* TARJETAS OSCURAS */
     .flow-card {
       background-color: var(--card-bg);
       border: 1.5px solid var(--card-border);
-      border-radius: 10px;
-      padding: 0.9rem;
+      border-radius: 12px;
+      padding: 1.15rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 0.8rem;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+      gap: 1rem;
+      min-height: 205px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     .flow-card:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
       border-color: var(--badge-lime);
     }
 
@@ -266,20 +264,20 @@
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      gap: 0.5rem;
+      gap: 0.6rem;
     }
 
     .flow-card-main {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
+      gap: 0.7rem;
     }
 
     .flow-icon {
-      width: 36px;
-      height: 36px;
-      min-width: 36px;
-      border-radius: 6px;
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      border-radius: 7px;
       background-color: #242824;
       border: 1px solid #444944;
       display: grid;
@@ -293,34 +291,37 @@
     }
 
     .flow-name {
-      font-size: 0.84rem;
+      font-size: 0.9rem;
       font-weight: 800;
       text-transform: uppercase;
-      line-height: 1.18;
+      line-height: 1.2;
       color: var(--text-light);
     }
 
     .flow-sub {
-      font-size: 0.7rem;
+      font-size: 0.74rem;
       color: var(--text-muted);
       margin-top: 0.15rem;
     }
 
-    /* BADGES DE FORMATO */
+    .flow-summary {
+      font-size: 0.82rem;
+      color: #cfd8cf;
+      line-height: 1.5;
+      margin-top: 0.75rem;
+    }
+
+    /* BADGES */
     .format-badge {
-      font-size: 0.65rem;
+      font-size: 0.66rem;
       font-weight: 800;
-      padding: 0.14rem 0.42rem;
+      padding: 0.18rem 0.5rem;
       border-radius: 999px;
       text-transform: uppercase;
       flex-shrink: 0;
     }
 
-    .badge-pdf-lime {
-      background-color: var(--badge-lime);
-      color: #111608;
-    }
-
+    .badge-pdf-lime,
     .badge-jpeg-lime {
       background-color: var(--badge-lime);
       color: #111608;
@@ -331,16 +332,16 @@
       color: #ffffff;
     }
 
-    /* BOTONES DE ACCIÓN */
+    /* BOTÓN "MÁS INFO AQUÍ" */
     .action-btn {
       width: 100%;
-      padding: 0.45rem 0.65rem;
-      border-radius: 5px;
+      padding: 0.58rem 0.75rem;
+      border-radius: 6px;
       border: 1px solid #525852;
-      background-color: #1d201d;
+      background-color: #1f231f;
       color: var(--text-light);
       font-family: inherit;
-      font-size: 0.76rem;
+      font-size: 0.8rem;
       font-weight: 700;
       cursor: pointer;
       transition: background-color 0.2s, color 0.2s, border-color 0.2s;
@@ -352,10 +353,10 @@
       border-color: var(--badge-lime);
     }
 
-    /* CONECTORES SVG ENTRE FRANJAS */
+    /* CONECTORES SVG */
     .bridge-connector {
       width: 100%;
-      height: 46px;
+      height: 76px;
       display: block;
       overflow: visible;
     }
@@ -376,10 +377,10 @@
       stroke-linejoin: round;
     }
 
-    /* FOOTER ESTILO PORTAFOLIO */
+    /* FOOTER */
     .portfolio-footer {
-      max-width: 1060px;
-      margin: 1rem auto 2.5rem;
+      max-width: 1080px;
+      margin: 1.5rem auto 3rem;
       padding: 0 1.25rem;
     }
 
@@ -387,7 +388,7 @@
       background-color: var(--bg-header);
       border: 1.5px solid #2d322d;
       border-radius: 14px;
-      padding: 1.4rem 1.6rem;
+      padding: 1.6rem 1.75rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
@@ -395,25 +396,25 @@
     }
 
     .footer-block h4 {
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       font-weight: 700;
       margin-bottom: 0.25rem;
     }
 
     .footer-block p {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
     }
 
     .social-row {
       display: flex;
       gap: 0.5rem;
-      margin-top: 0.5rem;
+      margin-top: 0.55rem;
     }
 
     .social-dot {
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       background-color: #252925;
       color: var(--text-light);
@@ -431,9 +432,9 @@
       background-color: #232723;
       border: 1px solid #495049;
       color: var(--text-light);
-      padding: 0.55rem 1rem;
+      padding: 0.6rem 1.05rem;
       border-radius: 999px;
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 700;
       text-decoration: none;
       transition: border-color 0.2s, background-color 0.2s;
@@ -444,11 +445,11 @@
       background-color: #2c312c;
     }
 
-    /* MODAL */
+    /* MODAL DE INFORMACIÓN ADICIONAL */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(5, 7, 5, 0.82);
+      background: rgba(5, 7, 5, 0.85);
       display: none;
       place-items: center;
       padding: 1.25rem;
@@ -463,21 +464,26 @@
       background-color: #191c19;
       border: 2px solid var(--zone-01);
       border-radius: 14px;
-      max-width: 500px;
+      max-width: 640px;
       width: 100%;
-      padding: 1.5rem;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 1.75rem;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
     }
 
     .modal-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 0.9rem;
+      margin-bottom: 1rem;
+      gap: 1rem;
+      border-bottom: 1px solid #2b312b;
+      padding-bottom: 0.75rem;
     }
 
     .modal-top h3 {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: var(--zone-01);
     }
 
@@ -485,72 +491,51 @@
       background: none;
       border: none;
       color: var(--text-muted);
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       cursor: pointer;
+      line-height: 1;
     }
 
     .modal-desc {
       font-size: 0.92rem;
       color: var(--text-light);
-      margin-bottom: 1.2rem;
-    }
-
-    .modal-file-path {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      background-color: #111311;
-      padding: 0.5rem 0.75rem;
-      border-radius: 6px;
-      border: 1px solid #2b302b;
-      margin-bottom: 1.2rem;
-      word-break: break-all;
+      margin-bottom: 1.25rem;
+      white-space: pre-line;
+      line-height: 1.6;
     }
 
     .modal-btns {
       display: flex;
       justify-content: flex-end;
-      gap: 0.7rem;
+      gap: 0.75rem;
     }
 
     .btn-cancel {
-      background-color: #272b27;
-      color: var(--text-light);
-      border: 1px solid #444a44;
-      padding: 0.55rem 0.95rem;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .btn-open-file {
       background-color: var(--zone-01);
       color: #111608;
       border: none;
-      padding: 0.55rem 1.05rem;
+      padding: 0.6rem 1.15rem;
       border-radius: 6px;
       font-weight: 800;
-      text-decoration: none;
+      cursor: pointer;
       font-size: 0.88rem;
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 1020px) {
-      .cards-5 {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    .btn-cancel:hover {
+      filter: brightness(1.07);
     }
 
-    @media (max-width: 780px) {
+    /* RESPONSIVE */
+    @media (max-width: 820px) {
       .hero-inner,
       .cards-2,
       .cards-3,
-      .cards-5,
       .footer-card {
         grid-template-columns: 1fr;
       }
 
       .bridge-connector {
-        height: 30px;
+        height: 44px;
       }
     }
   </style>
@@ -567,8 +552,6 @@
       <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#diagrama" class="active">Diagrama</a></li>
-        <li><a href="#bloque-04">Recursos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
   </header>
@@ -578,25 +561,20 @@
     <div class="hero-inner">
       <div>
         <h1>Estructura del Estado Colombiano</h1>
-        <p>Diagrama de Flujo &amp; Portafolio de Diseño &bull; Versión Interactiva</p>
+        <p>Diagrama de Flujo &amp; Portafolio de Diseño &bull; Organización, control, supervisión y entidades territoriales</p>
         <a href="#diagrama" class="btn-hero">Ver Diagrama Completo</a>
       </div>
 
       <div class="hero-graphic" aria-hidden="true">
         <svg viewBox="0 0 340 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Hoja de plano técnico -->
           <rect x="75" y="18" width="185" height="195" rx="6" fill="#232823" stroke="#7d8c7d" stroke-width="2"/>
-          <!-- Cajas del diagrama dentro del plano -->
           <rect x="148" y="42" width="44" height="22" rx="3" fill="#96d114"/>
           <rect x="105" y="95" width="44" height="22" rx="3" fill="#dfe6df"/>
           <rect x="186" y="95" width="44" height="22" rx="3" fill="#dfe6df"/>
           <rect x="148" y="148" width="44" height="22" rx="3" fill="#6f8f1d"/>
-          <!-- Líneas conectoras internas -->
           <path d="M170 64 V80 H127 V95 M170 80 H208 V95 M127 117 V132 H170 V148 M208 117 V132 H170" stroke="#96d114" stroke-width="2"/>
-          <!-- Escuadra inferior derecha -->
           <polygon points="150,215 295,215 295,70" fill="#cfd6cf" stroke="#161816" stroke-width="2.5"/>
           <polygon points="198,192 272,192 272,118" fill="#161816"/>
-          <!-- Compás superior derecho -->
           <g transform="translate(232, 10)">
             <circle cx="28" cy="14" r="6" fill="#161816" stroke="#cfd6cf" stroke-width="2.5"/>
             <line x1="25" y1="20" x2="10" y2="74" stroke="#cfd6cf" stroke-width="3" stroke-linecap="round"/>
@@ -616,69 +594,79 @@
       <div class="cards-2">
         <!-- 1. Estructura del Estado -->
         <article class="flow-card">
-          <div class="flow-card-head">
-            <div class="flow-card-main">
-              <div class="flow-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="9" y="3" width="6" height="4" rx="1"/>
-                  <rect x="3" y="16" width="5" height="4" rx="1"/>
-                  <rect x="10" y="16" width="4" height="4" rx="1"/>
-                  <rect x="16" y="16" width="5" height="4" rx="1"/>
-                  <path d="M12 7v4M5.5 16v-3h13v3M12 11v5"/>
-                </svg>
+          <div>
+            <div class="flow-card-head">
+              <div class="flow-card-main">
+                <div class="flow-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="3" width="6" height="4" rx="1"/>
+                    <rect x="3" y="16" width="5" height="4" rx="1"/>
+                    <rect x="10" y="16" width="4" height="4" rx="1"/>
+                    <rect x="16" y="16" width="5" height="4" rx="1"/>
+                    <path d="M12 7v4M5.5 16v-3h13v3M12 11v5"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="flow-name">Estructura del Estado</h3>
+                  <p class="flow-sub">Organización, ramas y coordinación</p>
+                </div>
               </div>
-              <div>
-                <h3 class="flow-name">Estructura del Estado</h3>
-                <p class="flow-sub">Organización y ramas</p>
-              </div>
+              <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
-            <span class="format-badge badge-pdf-lime">PDF</span>
+            <p class="flow-summary">
+              Define cómo se organiza el Estado colombiano bajo una república unitaria y descentralizada, articulando las ramas del poder, sectores administrativos y mecanismos de coordinación.
+            </p>
           </div>
           <button class="action-btn"
-                  data-title="Estructura del Estado (PDF)"
-                  data-desc="Documento sobre la organización del Estado Colombiano, ramas del poder público y estructura institucional."
-                  data-file="recursos/estructura-del-estado.pdf"
-                  data-type="PDF">
-            Ver Info / PDF
+                  data-title="Estructura del Estado Colombiano"
+                  data-desc="• Base constitucional y legal: Constitución Política de 1991 (Título V, Arts. 1, 113, 115, 209 y 288), Ley 489 de 1998 y Ley 1454 de 2011 (LOOT).
+• Conformación institucional: Ramas Legislativa, Ejecutiva (orden nacional y territorial: departamental y municipal) y Judicial, junto con entes autónomos y entidades del sector central y descentralizado (ministerios, departamentos administrativos, superintendencias, establecimientos públicos, UAE, agencias del Estado, ESE, EICE y sociedades de economía mixta).
+• Sectores administrativos y coordinación: abarca 24 sectores administrativos y mecanismos como la colaboración armónica, coordinación gubernamental (CONPES, CONFIS y comisiones intersectoriales), acción administrativa (ejercicio directo, delegación, desconcentración y descentralización) y principios territoriales (concurrencia, complementariedad y subsidiariedad).">
+            Más info aquí
           </button>
         </article>
 
         <!-- 2. Elementos del Estado -->
         <article class="flow-card">
-          <div class="flow-card-head">
-            <div class="flow-card-main">
-              <div class="flow-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="7" r="3"/>
-                  <circle cx="6" cy="17" r="3"/>
-                  <circle cx="18" cy="17" r="3"/>
-                  <path d="M10.5 9.5L7.5 14.5M13.5 9.5l3 5M9 17h6"/>
-                </svg>
+          <div>
+            <div class="flow-card-head">
+              <div class="flow-card-main">
+                <div class="flow-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="7" r="3"/>
+                    <circle cx="6" cy="17" r="3"/>
+                    <circle cx="18" cy="17" r="3"/>
+                    <path d="M10.5 9.5L7.5 14.5M13.5 9.5l3 5M9 17h6"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="flow-name">Elementos del Estado</h3>
+                  <p class="flow-sub">Sostenimiento, articulación y gestión</p>
+                </div>
               </div>
-              <div>
-                <h3 class="flow-name">Elementos del Estado</h3>
-                <p class="flow-sub">Población, territorio y poder</p>
-              </div>
+              <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
-            <span class="format-badge badge-pdf-lime">PDF</span>
+            <p class="flow-summary">
+              Resume los pilares que permiten que el Estado funcione y se proyecte en el territorio, conectando la autoridad pública, los recursos y la gestión institucional.
+            </p>
           </div>
           <button class="action-btn"
-                  data-title="Elementos del Estado (PDF)"
-                  data-desc="Descripción de los elementos esenciales que conforman el Estado y sus fundamentos jurídicos."
-                  data-file="recursos/elementos-del-estado.pdf"
-                  data-type="PDF">
-            Ver Info / PDF
+                  data-title="Elementos del Estado"
+                  data-desc="• Funcionamiento estatal: el Estado requiere un soporte territorial, humano y normativo que dé sentido a la autoridad pública y permita atender las necesidades de la sociedad.
+• Relación entre niveles: combina la unidad del orden nacional con la autonomía y capacidad de gestión de los órdenes departamental y municipal.
+• Orientación práctica: cada entidad cumple un rol específico dentro de la administración para garantizar servicios, orden y cumplimiento de los fines estatales.">
+            Más info aquí
           </button>
         </article>
       </div>
     </section>
 
     <!-- CONECTOR 01 -> 02 -->
-    <svg class="bridge-connector" viewBox="0 0 1000 46" preserveAspectRatio="none">
-      <path class="bridge-line" d="M 250 0 L 250 24 L 460 24 L 460 44" />
-      <path class="bridge-line" d="M 750 0 L 750 24 L 540 24 L 540 44" />
-      <polyline class="bridge-line" points="452,36 460,44 468,36" />
-      <polyline class="bridge-line" points="532,36 540,44 548,36" />
+    <svg class="bridge-connector" viewBox="0 0 1000 76" preserveAspectRatio="none">
+      <path class="bridge-line" d="M 250 0 L 250 38 L 460 38 L 460 72" />
+      <path class="bridge-line" d="M 750 0 L 750 38 L 540 38 L 540 72" />
+      <polyline class="bridge-line" points="452,63 460,73 468,63" />
+      <polyline class="bridge-line" points="532,63 540,73 548,63" />
     </svg>
 
     <!-- 02 / ÓRGANOS Y ORGANISMOS DE CONTROL (VERDE OLIVA) -->
@@ -687,92 +675,106 @@
       <div class="cards-3">
         <!-- 3. Órganos de Control -->
         <article class="flow-card">
-          <div class="flow-card-head">
-            <div class="flow-card-main">
-              <div class="flow-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 3L4 7v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V7l-8-4z"/>
-                  <path d="M9 12l2 2 4-4"/>
-                </svg>
+          <div>
+            <div class="flow-card-head">
+              <div class="flow-card-main">
+                <div class="flow-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 3L4 7v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V7l-8-4z"/>
+                    <path d="M9 12l2 2 4-4"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="flow-name">Órganos de Control</h3>
+                  <p class="flow-sub">Independencia y contrapeso público</p>
+                </div>
               </div>
-              <div>
-                <h3 class="flow-name">Órganos de Control</h3>
-                <p class="flow-sub">Vigilancia y ministerio público</p>
-              </div>
+              <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
-            <span class="format-badge badge-pdf-lime">PDF</span>
+            <p class="flow-summary">
+              Representan el control externo y autónomo frente a las ramas del poder, consolidado en 1991 para vigilar la función pública con imparcialidad.
+            </p>
           </div>
           <button class="action-btn"
-                  data-title="Órganos de Control (PDF)"
-                  data-desc="Información sobre los órganos de control y su función de vigilancia sobre la gestión pública."
-                  data-file="recursos/organos-de-control.pdf"
-                  data-type="PDF">
-            Ver Info / PDF
+                  data-title="Órganos de Control"
+                  data-desc="• Origen y transformación: desde el surgimiento del Ministerio Público en 1830 y las limitaciones de 1886 hasta la autonomía plena consagrada en la Constitución de 1991 (Arts. 113, 117 y Título X, Arts. 267 a 284) y el Acto Legislativo 02 de 2015.
+• Independencia real: operan al margen de las tres ramas del poder público, con autonomía administrativa y presupuestal para ejercer control fiscal, disciplinario y defensorial.">
+            Más info aquí
           </button>
         </article>
 
         <!-- 4. Organismos de Control -->
         <article class="flow-card">
-          <div class="flow-card-head">
-            <div class="flow-card-main">
-              <div class="flow-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="4" y="4" width="16" height="16" rx="2"/>
-                  <path d="M8 9h8M8 13h8M8 17h5"/>
-                </svg>
+          <div>
+            <div class="flow-card-head">
+              <div class="flow-card-main">
+                <div class="flow-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="4" y="4" width="16" height="16" rx="2"/>
+                    <path d="M8 9h8M8 13h8M8 17h5"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="flow-name">Organismos de Control</h3>
+                  <p class="flow-sub">Ministerio Público y vigilancia fiscal</p>
+                </div>
               </div>
-              <div>
-                <h3 class="flow-name">Organismos de Control</h3>
-                <p class="flow-sub">Competencias y autonomía</p>
-              </div>
+              <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
-            <span class="format-badge badge-pdf-lime">PDF</span>
+            <p class="flow-summary">
+              Agrupan las entidades encargadas de velar por la legalidad, los derechos humanos, la conducta de servidores públicos y la vigilancia fiscal.
+            </p>
           </div>
           <button class="action-btn"
-                  data-title="Organismos de Control (PDF)"
-                  data-desc="Detalle sobre los organismos de control autónomos y su rol en la transparencia institucional."
-                  data-file="recursos/organismode-control.pdf"
-                  data-type="PDF">
-            Ver Info / PDF
+                  data-title="Organismos de Control"
+                  data-desc="• Procuraduría General de la Nación: encabeza el Ministerio Público, vigila el cumplimiento de las normas y fallos judiciales, ejerce función disciplinaria y defiende el interés social.
+• Defensoría del Pueblo: impulsa, protege y difunde los derechos humanos con autonomía administrativa y presupuestal.
+• Contraloría y Auditoría General: la Contraloría vigila la gestión fiscal de los recursos públicos y la Auditoría General vigila fiscalmente a la Contraloría y entes de control (Decreto Ley 272 de 2000).">
+            Más info aquí
           </button>
         </article>
 
         <!-- 5. Contraloría -->
         <article class="flow-card">
-          <div class="flow-card-head">
-            <div class="flow-card-main">
-              <div class="flow-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="7"/>
-                  <path d="M20 20l-4-4"/>
-                </svg>
+          <div>
+            <div class="flow-card-head">
+              <div class="flow-card-main">
+                <div class="flow-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="7"/>
+                    <path d="M20 20l-4-4"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="flow-name">Contraloría</h3>
+                  <p class="flow-sub">Patrimonio público y control fiscal</p>
+                </div>
               </div>
-              <div>
-                <h3 class="flow-name">Contraloría</h3>
-                <p class="flow-sub">Control fiscal nacional</p>
-              </div>
+              <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
-            <span class="format-badge badge-pdf-lime">PDF</span>
+            <p class="flow-summary">
+              Vigila que los recursos y bienes públicos se administren con eficiencia, transparencia y legalidad, previniendo el detrimento fiscal y auditando la gestión.
+            </p>
           </div>
           <button class="action-btn"
-                  data-title="Contraloría (PDF)"
-                  data-desc="Documento sobre las funciones de control fiscal y auditoría de los recursos del Estado."
-                  data-file="recursos/contraloria.pdf"
-                  data-type="PDF">
-            Ver Info / PDF
+                  data-title="Contraloría — Gestión Fiscal y Control"
+                  data-desc="• Fundamento y autonomía: organismo técnico con autonomía administrativa y presupuestal (Constitución Art. 272 y Estatuto Orgánico de Bogotá en el ámbito distrital; Ley 106 de 1993, Decreto 267 de 2000 y normas de fortalecimiento), independiente de alcaldías, concejos o ramas del poder.
+• Sujetos vigilados: administración central y descentralizada, empresas industriales y comerciales o de economía mixta, servicios públicos domiciliarios, fondos locales y particulares que manejen recursos públicos.
+• Auditorías y hallazgos: aplica auditorías financiera/de gestión, de desempeño y de cumplimiento (apoyadas en analítica y control concomitante), derivando hallazgos administrativos, fiscales, disciplinarios o penales, además de promover veedurías y control ciudadano.">
+            Más info aquí
           </button>
         </article>
       </div>
     </section>
 
     <!-- CONECTOR 02 -> 03 -->
-    <svg class="bridge-connector" viewBox="0 0 1000 46" preserveAspectRatio="none">
-      <path class="bridge-line-light" d="M 166 0 L 166 24 L 460 24 L 460 44" />
-      <path class="bridge-line-light" d="M 500 0 L 500 44" />
-      <path class="bridge-line-light" d="M 834 0 L 834 24 L 540 24 L 540 44" />
-      <polyline class="bridge-line-light" points="452,36 460,44 468,36" />
-      <polyline class="bridge-line-light" points="492,36 500,44 508,36" />
-      <polyline class="bridge-line-light" points="532,36 540,44 548,36" />
+    <svg class="bridge-connector" viewBox="0 0 1000 76" preserveAspectRatio="none">
+      <path class="bridge-line-light" d="M 166 0 L 166 38 L 460 38 L 460 72" />
+      <path class="bridge-line-light" d="M 500 0 L 500 72" />
+      <path class="bridge-line-light" d="M 834 0 L 834 38 L 540 38 L 540 72" />
+      <polyline class="bridge-line-light" points="452,63 460,73 468,63" />
+      <polyline class="bridge-line-light" points="492,63 500,73 508,63" />
+      <polyline class="bridge-line-light" points="532,63 540,73 548,63" />
     </svg>
 
     <!-- 03 / MINISTERIOS Y ENTIDADES NACIONALES (CARBÓN OSCURO) -->
@@ -781,193 +783,222 @@
       <div class="cards-5">
         <!-- 6. Ministerio de Comercio -->
         <article class="flow-card">
-          <div class="flow-card-head">
-            <div class="flow-card-main">
+          <div>
+            <div class="flow-card-head">
               <div>
                 <h3 class="flow-name">Ministerio de Comercio</h3>
-                <p class="flow-sub">Comercio e industria</p>
+                <p class="flow-sub">Comercio, industria y turismo</p>
               </div>
+              <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
-            <span class="format-badge badge-pdf-lime">PDF</span>
+            <p class="flow-summary">
+              Orienta las políticas públicas de competitividad, desarrollo empresarial, comercio exterior, inversión y turismo en el país.
+            </p>
           </div>
           <button class="action-btn"
-                  data-title="Ministerio de Comercio (PDF)"
-                  data-desc="Información sobre el Ministerio de Comercio, Industria y Turismo y sus políticas sectoriales."
-                  data-file="recursos/ministerio-de-comercio.pdf"
-                  data-type="PDF">
-            Ver Info / PDF
+                  data-title="Ministerio de Comercio, Industria y Turismo"
+                  data-desc="• Rol sectorial: lidera la formulación y adopción de políticas, planes y programas en materia de comercio exterior, industria, turismo y desarrollo productivo.
+• Articulación institucional: coordina entidades adscritas y vinculadas del sector para impulsar la formalización, el emprendimiento y la inserción de Colombia en los mercados internacionales.">
+            Más info aquí
           </button>
         </article>
 
         <!-- 7. DIAN -->
         <article class="flow-card">
-          <div class="flow-card-head">
-            <div class="flow-card-main">
+          <div>
+            <div class="flow-card-head">
               <div>
                 <h3 class="flow-name">DIAN</h3>
-                <p class="flow-sub">Impuestos y aduanas</p>
+                <p class="flow-sub">Autoridad tributaria, aduanera y cambiaria</p>
               </div>
+              <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
-            <span class="format-badge badge-pdf-lime">PDF</span>
+            <p class="flow-summary">
+              Unidad Administrativa Especial adscrita a Hacienda que administra y controla los impuestos, aduanas, control cambiario y juegos de suerte y azar.
+            </p>
           </div>
           <button class="action-btn"
-                  data-title="DIAN (PDF)"
-                  data-desc="Documento sobre la Dirección de Impuestos y Aduanas Nacionales y sus competencias."
-                  data-file="recursos/dian.pdf"
-                  data-type="PDF">
-            Ver Info / PDF
+                  data-title="DIAN — Dirección de Impuestos y Aduanas Nacionales"
+                  data-desc="• Naturaleza y trayectoria: creada como Unidad Administrativa Especial mediante el Decreto 2117 de 1992 y consolidada el 1 de junio de 1993 con la fusión de DIN y DAN; su estructura vigente responde al Decreto 1742 de 2020 (tras normas como Decretos 1071 de 1999, 4048 de 2008 y Ley 1819 de 2016).
+• Funciones clave: gestiona impuestos nacionales (renta, IVA, timbre, retención), controla operaciones aduaneras y mercancías, vigila el régimen cambiario y zonas francas, interpreta doctrina, paga recompensas contra el contrabando y apoya la fiscalización con la Policía Fiscal y Aduanera.
+• Organización y recaudo: opera mediante procesos estratégicos, misionales, habilitantes y de aseguramiento, direcciones de gestión y direcciones seccionales; financia el gasto público, facilita el comercio legal y combate la evasión y el fraude.">
+            Más info aquí
           </button>
         </article>
 
         <!-- 8. INVIMA -->
         <article class="flow-card">
-          <div class="flow-card-head">
-            <div class="flow-card-main">
+          <div>
+            <div class="flow-card-head">
               <div>
                 <h3 class="flow-name">INVIMA</h3>
-                <p class="flow-sub">Vigilancia sanitaria</p>
+                <p class="flow-sub">Autoridad sanitaria nacional</p>
               </div>
+              <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
-            <span class="format-badge badge-pdf-lime">PDF</span>
+            <p class="flow-summary">
+              Establecimiento público técnico-científico adscrito a Minsalud que inspecciona, vigila y controla la calidad y seguridad de productos que afectan la salud.
+            </p>
           </div>
           <button class="action-btn"
-                  data-title="INVIMA (PDF)"
-                  data-desc="Guía sobre el Instituto Nacional de Vigilancia de Medicamentos y Alimentos."
-                  data-file="recursos/invima.pdf"
-                  data-type="PDF">
-            Ver Info / PDF
+                  data-title="INVIMA — Autoridad Sanitaria Nacional"
+                  data-desc="• Naturaleza y creación: creado en 1993 (Ley 100) y en operación desde 1995 como establecimiento público de carácter técnico-científico adscrito al Ministerio de Salud y Protección Social.
+• Productos vigilados: medicamentos y productos biológicos, alimentos y bebidas, cosméticos, productos naturales y biotecnología, dispositivos médicos, reactivos de diagnóstico in vitro, plaguicidas, productos de aseo y demás productos de interés sanitario.
+• Inspección, vigilancia y control: realiza visitas a fábricas, almacenes, puertos y fronteras, monitorea riesgos post-mercado (farmacovigilancia, tecnovigilancia, reactivovigilancia y alimentos), opera laboratorios de referencia y gestiona registros sanitarios (solicitud, evaluación técnico-científica, decisión y seguimiento continuo) con presencia territorial a través de los GTT y puntos de entrada.">
+            Más info aquí
           </button>
         </article>
 
         <!-- 9. Superintendencia de Sociedades -->
         <article class="flow-card">
-          <div class="flow-card-head">
-            <div class="flow-card-main">
+          <div>
+            <div class="flow-card-head">
               <div>
                 <h3 class="flow-name">Superintendencia de Sociedades</h3>
-                <p class="flow-sub">Supervisión societaria</p>
+                <p class="flow-sub">Supervisión societaria e insolvencia</p>
               </div>
+              <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
-            <span class="format-badge badge-pdf-lime">PDF</span>
+            <p class="flow-summary">
+              Entidad técnica adscrita al MinCIT que inspecciona, vigila y controla sociedades comerciales, actúa en procesos de insolvencia y ejerce funciones jurisdiccionales.
+            </p>
           </div>
           <button class="action-btn"
-                  data-title="Superintendencia de Sociedades (PDF)"
-                  data-desc="Información sobre inspección, vigilancia y control de sociedades comerciales."
-                  data-file="recursos/superintendencia-de-sociedades.pdf"
-                  data-type="PDF">
-            Ver Info / PDF
+                  data-title="Superintendencia de Sociedades"
+                  data-desc="• Marco normativo: respaldada en la Constitución (Arts. 116 y 189), el Código de Comercio (Decreto 410 de 1971), Ley 222 de 1995, Ley 1116 de 2006 (insolvencia), Ley 1258 de 2008 (S.A.S.) y Decreto 1736 de 2020 (estructura).
+• Funciones y organización: ejerce inspección (revisión de información y estados financieros), vigilancia permanente, control (correctivos y sanciones) y trámites de insolvencia, bajo la dirección del Superintendente de Sociedades, oficinas asesoras, Secretaría General e intendencias regionales.
+• Financiación e impacto: se financia principalmente con la contribución anual de las entidades vigiladas (tope de $1 por cada $1.000 de activos, más multas, servicios y aportes ligados a cámaras de comercio), fortaleciendo la confianza empresarial, la transparencia, el empleo y la resolución judicial especializada.">
+            Más info aquí
           </button>
         </article>
 
         <!-- 10. Superintendencia Financiera -->
         <article class="flow-card">
-          <div class="flow-card-head">
-            <div class="flow-card-main">
+          <div>
+            <div class="flow-card-head">
               <div>
                 <h3 class="flow-name">Superintendencia Financiera</h3>
-                <p class="flow-sub">Sistema financiero</p>
+                <p class="flow-sub">Sistema financiero, seguros y valores</p>
               </div>
+              <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
-            <span class="format-badge badge-pdf-lime">PDF</span>
+            <p class="flow-summary">
+              Organismo adscrito al Ministerio de Hacienda con autonomía y patrimonio propio que supervisa el sistema financiero, asegurador y del mercado de valores.
+            </p>
           </div>
           <button class="action-btn"
-                  data-title="Superintendencia Financiera (PDF)"
-                  data-desc="Documento sobre la supervisión del sistema financiero y mercados en Colombia."
-                  data-file="recursos/superintendencia-financiera.pdf"
-                  data-type="PDF">
-            Ver Info / PDF
+                  data-title="Superintendencia Financiera de Colombia"
+                  data-desc="• Origen y legislación: creada mediante el Decreto 4327 de 2005 (vigente desde el 26 de noviembre de 2005) al fusionar la Superintendencia Bancaria y la de Valores; se rige también por el Estatuto Orgánico del Sistema Financiero (Decreto 663 de 1993), Ley 964 de 2005, Decreto 2555 de 2010 y Ley 1480 de 2011.
+• Entidades supervisadas y funciones: vigila intermediarios financieros, aseguradoras, pensiones, fiduciarias, intermediarios de valores y conglomerados financieros para preservar la estabilidad, integridad, transparencia y confianza del sistema, proteger al consumidor financiero (incluso con funciones jurisdiccionales), prevenir captaciones ilegales y certificar el interés bancario corriente.
+• Estructura y presupuesto: cuenta con Consejo Asesor, Superintendente Financiero, oficinas asesoras, control interno/disciplinario, dirección jurídica y delegadas especializadas (consumidor financiero, funciones jurisdiccionales, riesgos y emisores/valores); se financia principalmente con contribuciones semestrales de las vigiladas.">
+            Más info aquí
           </button>
         </article>
       </div>
     </section>
 
     <!-- CONECTOR 03 -> 04 -->
-    <svg class="bridge-connector" viewBox="0 0 1000 46" preserveAspectRatio="none">
-      <path class="bridge-line-light" d="M 100 0 L 100 24 L 460 24 L 460 44" />
-      <path class="bridge-line-light" d="M 500 0 L 500 44" />
-      <path class="bridge-line-light" d="M 900 0 L 900 24 L 540 24 L 540 44" />
-      <polyline class="bridge-line-light" points="452,36 460,44 468,36" />
-      <polyline class="bridge-line-light" points="492,36 500,44 508,36" />
-      <polyline class="bridge-line-light" points="532,36 540,44 548,36" />
+    <svg class="bridge-connector" viewBox="0 0 1000 76" preserveAspectRatio="none">
+      <path class="bridge-line-light" d="M 100 0 L 100 38 L 460 38 L 460 72" />
+      <path class="bridge-line-light" d="M 500 0 L 500 72" />
+      <path class="bridge-line-light" d="M 900 0 L 900 38 L 540 38 L 540 72" />
+      <polyline class="bridge-line-light" points="452,63 460,73 468,63" />
+      <polyline class="bridge-line-light" points="492,63 500,73 508,63" />
+      <polyline class="bridge-line-light" points="532,63 540,73 548,63" />
     </svg>
 
     <!-- 04 / ENTIDADES TERRITORIALES, SALUD Y COMERCIO (CORAL / ROJO) -->
-    <section id="bloque-04" class="color-layer layer-04">
+    <section class="color-layer layer-04">
       <h2 class="layer-title">04 / ENTIDADES TERRITORIALES, SALUD Y COMERCIO</h2>
       <div class="cards-3">
         <!-- 11. SHD -->
         <article class="flow-card">
-          <div class="flow-card-head">
-            <div class="flow-card-main">
-              <div class="flow-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="4" y="3" width="16" height="18" rx="2"/>
-                  <path d="M8 7h2M14 7h2M8 11h2M14 11h2M9 21v-5h6v5"/>
-                </svg>
+          <div>
+            <div class="flow-card-head">
+              <div class="flow-card-main">
+                <div class="flow-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="4" y="3" width="16" height="18" rx="2"/>
+                    <path d="M8 7h2M14 7h2M8 11h2M14 11h2M9 21v-5h6v5"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="flow-name">SHD</h3>
+                  <p class="flow-sub">Secretaría Distrital de Hacienda de Bogotá</p>
+                </div>
               </div>
-              <div>
-                <h3 class="flow-name">SHD</h3>
-                <p class="flow-sub">Secretaría de Hacienda Distrital</p>
-              </div>
+              <span class="format-badge badge-jpeg-lime">JPEG</span>
             </div>
-            <span class="format-badge badge-jpeg-lime">JPEG</span>
+            <p class="flow-summary">
+              Entidad del sector central distrital que dirige y administra la política fiscal y financiera de Bogotá para sostener el funcionamiento y desarrollo de la ciudad[cite: 18].
+            </p>
           </div>
           <button class="action-btn"
-                  data-title="SHD - Secretaría de Hacienda Distrital (JPEG)"
-                  data-desc="Imagen de referencia sobre la Secretaría de Hacienda Distrital."
-                  data-file="recursos/shd.jpg"
-                  data-type="JPEG">
-            Ver Imagen / JPEG
+                  data-title="Secretaría Distrital de Hacienda de Bogotá (SHD)"
+                  data-desc="• Qué es y marco normativo: entidad del sector central de la Administración Distrital encargada de dirigir y administrar la política financiera y fiscal de Bogotá, con hitos en la Constitución de 1991, el Decreto Ley 1421 de 1993 (régimen especial) y el Decreto Distrital 601 de 2014[cite: 18].
+• Funciones y tributos: recauda ingresos e impuestos distritales (predial, vehículos, ICA y delineación urbana), formula y administra el presupuesto, gestiona tesorería y pagos, lleva la contabilidad pública y maneja crédito y planeación financiera[cite: 18].
+• Destino de recursos y modernización: los recursos planeados y administrados se reflejan en educación, salud, movilidad, seguridad e infraestructura (ejecutados por las entidades correspondientes), apoyándose en plataformas como BogData para integrar y modernizar la gestión[cite: 18].">
+            Más info aquí
           </button>
         </article>
 
         <!-- 12. Secretaría de Salud -->
         <article class="flow-card">
-          <div class="flow-card-head">
-            <div class="flow-card-main">
-              <div class="flow-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#ff6a59" stroke-width="2.5">
-                  <path d="M12 5v14M5 12h14"/>
-                </svg>
+          <div>
+            <div class="flow-card-head">
+              <div class="flow-card-main">
+                <div class="flow-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#ff6a59" stroke-width="2.5">
+                    <path d="M12 5v14M5 12h14"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="flow-name">Secretaría de Salud</h3>
+                  <p class="flow-sub">Secretaría Distrital de Salud de Bogotá</p>
+                </div>
               </div>
-              <div>
-                <h3 class="flow-name">Secretaría de Salud</h3>
-                <p class="flow-sub">Archivo comprimido</p>
-              </div>
+              <span class="format-badge badge-zip-coral">1 ZIP</span>
             </div>
-            <span class="format-badge badge-zip-coral">1 ZIP</span>
+            <p class="flow-summary">
+              Orienta la salud pública y la atención en Bogotá bajo el modelo MAS Bienestar, articulando redes hospitalarias, aseguramiento y servicios ciudadanos[cite: 19, 20, 21].
+            </p>
           </div>
           <button class="action-btn"
-                  data-title="Secretaría de Salud (ZIP)"
-                  data-desc="Paquete ZIP con los archivos de información de la Secretaría de Salud."
-                  data-file="recursos/secretaria-de-salud.zip"
-                  data-type="ZIP">
-            Descargar ZIP
+                  data-title="Secretaría Distrital de Salud de Bogotá"
+                  data-desc="• Modelo, historia y marco legal: impulsa el modelo MAS Bienestar (atención primaria social), con trayectoria desde acuerdos distritales históricos (1971, 1990, 2006, 2016) y Decreto 507 de 2013, respaldada por la Ley 100 de 1993, Ley 715 de 2001 y Ley Estatutaria 1751 de 2015[cite: 19].
+• Estructura y funciones: se organiza en el Despacho del Secretario (con subsecretarías de salud pública, servicios de salud y aseguramiento, gestión territorial, planeación y gestión sectorial, y corporativa) y entidades/subredes adscritas (como FFDS y Subredes Norte, Sur, Centro Oriente y Sur Occidente), ejerciendo rectoría en salud pública, aseguramiento del régimen subsidiado, inspección, vigilancia y control sanitario (IVC) y gestión de urgencias (CRUE)[cite: 20].
+• Inversión y servicios: destina recursos a régimen subsidiado, salud pública colectiva e infraestructura hospitalaria, y presta servicios ciudadanos como Línea 123 (ambulancias CRUE), Línea 106 (salud mental 24/7), puntos de vacunación, sellos sanitarios y el observatorio SaluData[cite: 21].">
+            Más info aquí
           </button>
         </article>
 
         <!-- 13. Cámara de Comercio -->
         <article class="flow-card">
-          <div class="flow-card-head">
-            <div class="flow-card-main">
-              <div class="flow-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M3 21h18M4 10h16M6 10v11M18 10v11M10 10v11M14 10v11M12 3l9 7H3l9-7z"/>
-                </svg>
+          <div>
+            <div class="flow-card-head">
+              <div class="flow-card-main">
+                <div class="flow-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 21h18M4 10h16M6 10v11M18 10v11M10 10v11M14 10v11M12 3l9 7H3l9-7z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="flow-name">Cámara de Comercio</h3>
+                  <p class="flow-sub">Registros, formalización y gremio</p>
+                </div>
               </div>
-              <div>
-                <h3 class="flow-name">Cámara de Comercio</h3>
-                <p class="flow-sub">Registro y apoyo empresarial</p>
-              </div>
+              <span class="format-badge badge-jpeg-lime">JPEG</span>
             </div>
-            <span class="format-badge badge-jpeg-lime">JPEG</span>
+            <p class="flow-summary">
+              Instituciones privadas sin ánimo de lucro de orden legal —vigiladas por Supersociedades y articuladas en Confecámaras— que apoyan empresas, registros y competitividad[cite: 22].
+            </p>
           </div>
           <button class="action-btn"
-                  data-title="Cámara de Comercio (JPEG)"
-                  data-desc="Imagen de referencia sobre funciones de la Cámara de Comercio."
-                  data-file="recursos/camara-de-comercio.jpg"
-                  data-type="JPEG">
-            Ver Imagen / JPEG
+                  data-title="Cámaras de Comercio"
+                  data-desc="• Naturaleza y utilidad: entidades privadas, gremiales y sin ánimo de lucro de orden legal (58 cámaras agrupadas en Confecámaras), bajo vigilancia de la Superintendencia de Sociedades, que brindan identidad legal y formalización a comerciantes, apoyo de información y competitividad al Estado, y confianza y transparencia a la sociedad[cite: 22].
+• Organización, financiación y funciones: cuentan con junta directiva y presidencia ejecutiva (con áreas registral y de competitividad/servicios); se financian con ingresos públicos (matrículas, renovaciones y certificados, con vigilancia de la Contraloría) e ingresos privados (afiliados, servicios especializados, eventos y formación), y administran registros como el RUES, resuelven mecanismos de conflicto, dan fe pública mercantil, certifican costumbre mercantil, realizan estudios económicos y ejercen vocería gremial[cite: 22].
+• Programas y alianzas: impulsan iniciativas como VUE, fábricas de productividad y sostenibilidad, BazzarBog y clústeres sectoriales, además de convenios con entidades y aliados como FNG, ProColombia, ICC y SENA[cite: 22].">
+            Más info aquí
           </button>
         </article>
       </div>
@@ -976,7 +1007,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer id="contacto" class="portfolio-footer">
+  <footer class="portfolio-footer">
     <div class="footer-card">
       <div class="footer-block">
         <h4>Diseño Gráfico</h4>
@@ -984,14 +1015,14 @@
         <div class="social-row">
           <a href="#inicio" class="social-dot">Bē</a>
           <a href="#diagrama" class="social-dot">◎</a>
-          <a href="#contacto" class="social-dot">in</a>
+          <a href="#diagrama" class="social-dot">in</a>
         </div>
       </div>
 
       <div class="footer-block">
         <h4>Portafolio</h4>
         <p>Estructura del Estado Colombiano</p>
-        <p>Recursos PDF, JPEG y ZIP</p>
+        <p>Organización institucional, control y entidades</p>
       </div>
 
       <div class="footer-block">
@@ -1011,10 +1042,8 @@
         <button class="modal-x" id="modalCloseBtn" aria-label="Cerrar">&times;</button>
       </div>
       <p id="modalDescription" class="modal-desc">Descripción</p>
-      <div id="modalFilePath" class="modal-file-path">recursos/archivo.pdf</div>
       <div class="modal-btns">
         <button class="btn-cancel" id="modalCancelBtn">Cerrar</button>
-        <a id="modalActionLink" href="#" target="_blank" rel="noopener" class="btn-open-file">Abrir Archivo</a>
       </div>
     </div>
   </div>
@@ -1023,23 +1052,13 @@
     const overlay = document.getElementById('infoModal');
     const heading = document.getElementById('modalHeading');
     const description = document.getElementById('modalDescription');
-    const filePathBox = document.getElementById('modalFilePath');
-    const actionLink = document.getElementById('modalActionLink');
     const closeBtn = document.getElementById('modalCloseBtn');
     const cancelBtn = document.getElementById('modalCancelBtn');
 
     document.querySelectorAll('.action-btn').forEach((button) => {
       button.addEventListener('click', () => {
-        const title = button.getAttribute('data-title');
-        const desc = button.getAttribute('data-desc');
-        const file = button.getAttribute('data-file');
-        const type = button.getAttribute('data-type');
-
-        heading.textContent = title;
-        description.textContent = desc;
-        filePathBox.textContent = `Ruta del archivo: ${file}`;
-        actionLink.href = file;
-        actionLink.textContent = type === 'ZIP' ? 'Descargar ZIP' : `Abrir ${type}`;
+        heading.textContent = button.getAttribute('data-title');
+        description.textContent = button.getAttribute('data-desc');
         overlay.classList.add('active');
       });
     });
