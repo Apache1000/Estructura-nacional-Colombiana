@@ -445,11 +445,11 @@
       background-color: #2c312c;
     }
 
-    /* MODAL DE INFORMACIÓN ADICIONAL */
+    /* MODAL ESTRUCTURADO POR BLOQUES */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(5, 7, 5, 0.85);
+      background: rgba(5, 7, 5, 0.86);
       display: none;
       place-items: center;
       padding: 1.25rem;
@@ -464,26 +464,26 @@
       background-color: #191c19;
       border: 2px solid var(--zone-01);
       border-radius: 14px;
-      max-width: 640px;
+      max-width: 720px;
       width: 100%;
-      max-height: 85vh;
+      max-height: 86vh;
       overflow-y: auto;
       padding: 1.75rem;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
     }
 
     .modal-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
       gap: 1rem;
-      border-bottom: 1px solid #2b312b;
-      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #2e352e;
+      padding-bottom: 0.85rem;
     }
 
     .modal-top h3 {
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       color: var(--zone-01);
     }
 
@@ -496,12 +496,35 @@
       line-height: 1;
     }
 
-    .modal-desc {
-      font-size: 0.92rem;
+    .modal-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .modal-block {
+      background-color: #121512;
+      border: 1px solid #2a302a;
+      border-left: 3px solid var(--zone-01);
+      border-radius: 8px;
+      padding: 0.9rem 1rem;
+    }
+
+    .modal-block h4 {
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--badge-lime);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+
+    .modal-block p {
+      font-size: 0.9rem;
       color: var(--text-light);
-      margin-bottom: 1.25rem;
+      line-height: 1.55;
       white-space: pre-line;
-      line-height: 1.6;
     }
 
     .modal-btns {
@@ -514,7 +537,7 @@
       background-color: var(--zone-01);
       color: #111608;
       border: none;
-      padding: 0.6rem 1.15rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 6px;
       font-weight: 800;
       cursor: pointer;
@@ -593,7 +616,7 @@
       <h2 class="layer-title">01 / BASE Y FUNDAMENTOS DEL ESTADO</h2>
       <div class="cards-2">
         <!-- 1. Estructura del Estado -->
-        <article class="flow-card">
+        <article class="flow-card" data-topic="estructura-estado">
           <div>
             <div class="flow-card-head">
               <div class="flow-card-main">
@@ -608,26 +631,20 @@
                 </div>
                 <div>
                   <h3 class="flow-name">Estructura del Estado</h3>
-                  <p class="flow-sub">Organización, ramas y coordinación</p>
+                  <p class="flow-sub">Ramas, sectores y coordinación</p>
                 </div>
               </div>
               <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
             <p class="flow-summary">
-              Define cómo se organiza el Estado colombiano bajo una república unitaria y descentralizada, articulando las ramas del poder, sectores administrativos y mecanismos de coordinación.
+              Define a Colombia como Estado Social de Derecho bajo una república unitaria, descentralizada y con autonomía territorial, integrada por las Ramas del Poder Público, órganos autónomos, sectores administrativos y mecanismos de coordinación.
             </p>
           </div>
-          <button class="action-btn"
-                  data-title="Estructura del Estado Colombiano"
-                  data-desc="• Base constitucional y legal: Constitución Política de 1991 (Título V, Arts. 1, 113, 115, 209 y 288), Ley 489 de 1998 y Ley 1454 de 2011 (LOOT).
-• Conformación institucional: Ramas Legislativa, Ejecutiva (orden nacional y territorial: departamental y municipal) y Judicial, junto con entes autónomos y entidades del sector central y descentralizado (ministerios, departamentos administrativos, superintendencias, establecimientos públicos, UAE, agencias del Estado, ESE, EICE y sociedades de economía mixta).
-• Sectores administrativos y coordinación: abarca 24 sectores administrativos y mecanismos como la colaboración armónica, coordinación gubernamental (CONPES, CONFIS y comisiones intersectoriales), acción administrativa (ejercicio directo, delegación, desconcentración y descentralización) y principios territoriales (concurrencia, complementariedad y subsidiariedad).">
-            Más info aquí
-          </button>
+          <button class="action-btn">Más info aquí</button>
         </article>
 
         <!-- 2. Elementos del Estado -->
-        <article class="flow-card">
+        <article class="flow-card" data-topic="elementos-estado">
           <div>
             <div class="flow-card-head">
               <div class="flow-card-main">
@@ -641,22 +658,16 @@
                 </div>
                 <div>
                   <h3 class="flow-name">Elementos del Estado</h3>
-                  <p class="flow-sub">Sostenimiento, articulación y gestión</p>
+                  <p class="flow-sub">Base, articulación y orden territorial</p>
                 </div>
               </div>
               <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
             <p class="flow-summary">
-              Resume los pilares que permiten que el Estado funcione y se proyecte en el territorio, conectando la autoridad pública, los recursos y la gestión institucional.
+              Explica cómo se articula la organización estatal entre el nivel nacional y el territorial (departamental y municipal) para sostener el funcionamiento y cumplimiento de los fines públicos.
             </p>
           </div>
-          <button class="action-btn"
-                  data-title="Elementos del Estado"
-                  data-desc="• Funcionamiento estatal: el Estado requiere un soporte territorial, humano y normativo que dé sentido a la autoridad pública y permita atender las necesidades de la sociedad.
-• Relación entre niveles: combina la unidad del orden nacional con la autonomía y capacidad de gestión de los órdenes departamental y municipal.
-• Orientación práctica: cada entidad cumple un rol específico dentro de la administración para garantizar servicios, orden y cumplimiento de los fines estatales.">
-            Más info aquí
-          </button>
+          <button class="action-btn">Más info aquí</button>
         </article>
       </div>
     </section>
@@ -674,7 +685,7 @@
       <h2 class="layer-title">02 / ÓRGANOS Y ORGANISMOS DE CONTROL</h2>
       <div class="cards-3">
         <!-- 3. Órganos de Control -->
-        <article class="flow-card">
+        <article class="flow-card" data-topic="organos-control">
           <div>
             <div class="flow-card-head">
               <div class="flow-card-main">
@@ -686,25 +697,20 @@
                 </div>
                 <div>
                   <h3 class="flow-name">Órganos de Control</h3>
-                  <p class="flow-sub">Independencia y contrapeso público</p>
+                  <p class="flow-sub">Control exógeno y autonomía</p>
                 </div>
               </div>
               <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
             <p class="flow-summary">
-              Representan el control externo y autónomo frente a las ramas del poder, consolidado en 1991 para vigilar la función pública con imparcialidad.
+              Instancias autónomas e independientes de las tres ramas del poder público, consolidadas en 1991 para sumar un control exógeno sobre la función pública.
             </p>
           </div>
-          <button class="action-btn"
-                  data-title="Órganos de Control"
-                  data-desc="• Origen y transformación: desde el surgimiento del Ministerio Público en 1830 y las limitaciones de 1886 hasta la autonomía plena consagrada en la Constitución de 1991 (Arts. 113, 117 y Título X, Arts. 267 a 284) y el Acto Legislativo 02 de 2015.
-• Independencia real: operan al margen de las tres ramas del poder público, con autonomía administrativa y presupuestal para ejercer control fiscal, disciplinario y defensorial.">
-            Más info aquí
-          </button>
+          <button class="action-btn">Más info aquí</button>
         </article>
 
         <!-- 4. Organismos de Control -->
-        <article class="flow-card">
+        <article class="flow-card" data-topic="organismos-control">
           <div>
             <div class="flow-card-head">
               <div class="flow-card-main">
@@ -722,20 +728,14 @@
               <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
             <p class="flow-summary">
-              Agrupan las entidades encargadas de velar por la legalidad, los derechos humanos, la conducta de servidores públicos y la vigilancia fiscal.
+              Comprenden la Contraloría General de la República, la Auditoría General de la República y el Ministerio Público (Procuraduría General y Defensoría del Pueblo).
             </p>
           </div>
-          <button class="action-btn"
-                  data-title="Organismos de Control"
-                  data-desc="• Procuraduría General de la Nación: encabeza el Ministerio Público, vigila el cumplimiento de las normas y fallos judiciales, ejerce función disciplinaria y defiende el interés social.
-• Defensoría del Pueblo: impulsa, protege y difunde los derechos humanos con autonomía administrativa y presupuestal.
-• Contraloría y Auditoría General: la Contraloría vigila la gestión fiscal de los recursos públicos y la Auditoría General vigila fiscalmente a la Contraloría y entes de control (Decreto Ley 272 de 2000).">
-            Más info aquí
-          </button>
+          <button class="action-btn">Más info aquí</button>
         </article>
 
         <!-- 5. Contraloría -->
-        <article class="flow-card">
+        <article class="flow-card" data-topic="contraloria">
           <div>
             <div class="flow-card-head">
               <div class="flow-card-main">
@@ -747,22 +747,16 @@
                 </div>
                 <div>
                   <h3 class="flow-name">Contraloría</h3>
-                  <p class="flow-sub">Patrimonio público y control fiscal</p>
+                  <p class="flow-sub">Vigilancia de la gestión fiscal</p>
                 </div>
               </div>
               <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
             <p class="flow-summary">
-              Vigila que los recursos y bienes públicos se administren con eficiencia, transparencia y legalidad, previniendo el detrimento fiscal y auditando la gestión.
+              Organismo técnico con autonomía administrativa y presupuestal encargado de vigilar que los recursos y bienes públicos se administren con eficiencia, transparencia y legalidad.
             </p>
           </div>
-          <button class="action-btn"
-                  data-title="Contraloría — Gestión Fiscal y Control"
-                  data-desc="• Fundamento y autonomía: organismo técnico con autonomía administrativa y presupuestal (Constitución Art. 272 y Estatuto Orgánico de Bogotá en el ámbito distrital; Ley 106 de 1993, Decreto 267 de 2000 y normas de fortalecimiento), independiente de alcaldías, concejos o ramas del poder.
-• Sujetos vigilados: administración central y descentralizada, empresas industriales y comerciales o de economía mixta, servicios públicos domiciliarios, fondos locales y particulares que manejen recursos públicos.
-• Auditorías y hallazgos: aplica auditorías financiera/de gestión, de desempeño y de cumplimiento (apoyadas en analítica y control concomitante), derivando hallazgos administrativos, fiscales, disciplinarios o penales, además de promover veedurías y control ciudadano.">
-            Más info aquí
-          </button>
+          <button class="action-btn">Más info aquí</button>
         </article>
       </div>
     </section>
@@ -782,52 +776,41 @@
       <h2 class="layer-title">03 / MINISTERIOS Y ENTIDADES NACIONALES</h2>
       <div class="cards-5">
         <!-- 6. Ministerio de Comercio -->
-        <article class="flow-card">
+        <article class="flow-card" data-topic="mincomercio">
           <div>
             <div class="flow-card-head">
               <div>
                 <h3 class="flow-name">Ministerio de Comercio</h3>
-                <p class="flow-sub">Comercio, industria y turismo</p>
+                <p class="flow-sub">Sector Comercio, Industria y Turismo</p>
               </div>
               <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
             <p class="flow-summary">
-              Orienta las políticas públicas de competitividad, desarrollo empresarial, comercio exterior, inversión y turismo en el país.
+              Organismo principal de la Rama Ejecutiva que formula y adopta políticas, planes y proyectos en comercio exterior, industria, turismo y desarrollo empresarial.
             </p>
           </div>
-          <button class="action-btn"
-                  data-title="Ministerio de Comercio, Industria y Turismo"
-                  data-desc="• Rol sectorial: lidera la formulación y adopción de políticas, planes y programas en materia de comercio exterior, industria, turismo y desarrollo productivo.
-• Articulación institucional: coordina entidades adscritas y vinculadas del sector para impulsar la formalización, el emprendimiento y la inserción de Colombia en los mercados internacionales.">
-            Más info aquí
-          </button>
+          <button class="action-btn">Más info aquí</button>
         </article>
 
         <!-- 7. DIAN -->
-        <article class="flow-card">
+        <article class="flow-card" data-topic="dian">
           <div>
             <div class="flow-card-head">
               <div>
                 <h3 class="flow-name">DIAN</h3>
-                <p class="flow-sub">Autoridad tributaria, aduanera y cambiaria</p>
+                <p class="flow-sub">Tributaria, aduanera y cambiaria</p>
               </div>
               <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
             <p class="flow-summary">
-              Unidad Administrativa Especial adscrita a Hacienda que administra y controla los impuestos, aduanas, control cambiario y juegos de suerte y azar.
+              Unidad Administrativa Especial adscrita a Hacienda con autonomía administrativa y presupuestal que administra y controla impuestos, aduanas, control cambiario y juegos de suerte y azar.
             </p>
           </div>
-          <button class="action-btn"
-                  data-title="DIAN — Dirección de Impuestos y Aduanas Nacionales"
-                  data-desc="• Naturaleza y trayectoria: creada como Unidad Administrativa Especial mediante el Decreto 2117 de 1992 y consolidada el 1 de junio de 1993 con la fusión de DIN y DAN; su estructura vigente responde al Decreto 1742 de 2020 (tras normas como Decretos 1071 de 1999, 4048 de 2008 y Ley 1819 de 2016).
-• Funciones clave: gestiona impuestos nacionales (renta, IVA, timbre, retención), controla operaciones aduaneras y mercancías, vigila el régimen cambiario y zonas francas, interpreta doctrina, paga recompensas contra el contrabando y apoya la fiscalización con la Policía Fiscal y Aduanera.
-• Organización y recaudo: opera mediante procesos estratégicos, misionales, habilitantes y de aseguramiento, direcciones de gestión y direcciones seccionales; financia el gasto público, facilita el comercio legal y combate la evasión y el fraude.">
-            Más info aquí
-          </button>
+          <button class="action-btn">Más info aquí</button>
         </article>
 
         <!-- 8. INVIMA -->
-        <article class="flow-card">
+        <article class="flow-card" data-topic="invima">
           <div>
             <div class="flow-card-head">
               <div>
@@ -837,20 +820,14 @@
               <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
             <p class="flow-summary">
-              Establecimiento público técnico-científico adscrito a Minsalud que inspecciona, vigila y controla la calidad y seguridad de productos que afectan la salud.
+              Establecimiento público técnico-científico adscrito a Minsalud que ejerce inspección, vigilancia y control sanitario sobre productos que pueden afectar la salud.
             </p>
           </div>
-          <button class="action-btn"
-                  data-title="INVIMA — Autoridad Sanitaria Nacional"
-                  data-desc="• Naturaleza y creación: creado en 1993 (Ley 100) y en operación desde 1995 como establecimiento público de carácter técnico-científico adscrito al Ministerio de Salud y Protección Social.
-• Productos vigilados: medicamentos y productos biológicos, alimentos y bebidas, cosméticos, productos naturales y biotecnología, dispositivos médicos, reactivos de diagnóstico in vitro, plaguicidas, productos de aseo y demás productos de interés sanitario.
-• Inspección, vigilancia y control: realiza visitas a fábricas, almacenes, puertos y fronteras, monitorea riesgos post-mercado (farmacovigilancia, tecnovigilancia, reactivovigilancia y alimentos), opera laboratorios de referencia y gestiona registros sanitarios (solicitud, evaluación técnico-científica, decisión y seguimiento continuo) con presencia territorial a través de los GTT y puntos de entrada.">
-            Más info aquí
-          </button>
+          <button class="action-btn">Más info aquí</button>
         </article>
 
         <!-- 9. Superintendencia de Sociedades -->
-        <article class="flow-card">
+        <article class="flow-card" data-topic="supersociedades">
           <div>
             <div class="flow-card-head">
               <div>
@@ -863,17 +840,11 @@
               Entidad técnica adscrita al MinCIT que inspecciona, vigila y controla sociedades comerciales, actúa en procesos de insolvencia y ejerce funciones jurisdiccionales.
             </p>
           </div>
-          <button class="action-btn"
-                  data-title="Superintendencia de Sociedades"
-                  data-desc="• Marco normativo: respaldada en la Constitución (Arts. 116 y 189), el Código de Comercio (Decreto 410 de 1971), Ley 222 de 1995, Ley 1116 de 2006 (insolvencia), Ley 1258 de 2008 (S.A.S.) y Decreto 1736 de 2020 (estructura).
-• Funciones y organización: ejerce inspección (revisión de información y estados financieros), vigilancia permanente, control (correctivos y sanciones) y trámites de insolvencia, bajo la dirección del Superintendente de Sociedades, oficinas asesoras, Secretaría General e intendencias regionales.
-• Financiación e impacto: se financia principalmente con la contribución anual de las entidades vigiladas (tope de $1 por cada $1.000 de activos, más multas, servicios y aportes ligados a cámaras de comercio), fortaleciendo la confianza empresarial, la transparencia, el empleo y la resolución judicial especializada.">
-            Más info aquí
-          </button>
+          <button class="action-btn">Más info aquí</button>
         </article>
 
         <!-- 10. Superintendencia Financiera -->
-        <article class="flow-card">
+        <article class="flow-card" data-topic="superfinanciera">
           <div>
             <div class="flow-card-head">
               <div>
@@ -883,16 +854,10 @@
               <span class="format-badge badge-pdf-lime">PDF</span>
             </div>
             <p class="flow-summary">
-              Organismo adscrito al Ministerio de Hacienda con autonomía y patrimonio propio que supervisa el sistema financiero, asegurador y del mercado de valores.
+              Entidad adscrita al Ministerio de Hacienda con personería jurídica, autonomía y patrimonio propio que supervisa el sistema financiero, asegurador y del mercado de valores.
             </p>
           </div>
-          <button class="action-btn"
-                  data-title="Superintendencia Financiera de Colombia"
-                  data-desc="• Origen y legislación: creada mediante el Decreto 4327 de 2005 (vigente desde el 26 de noviembre de 2005) al fusionar la Superintendencia Bancaria y la de Valores; se rige también por el Estatuto Orgánico del Sistema Financiero (Decreto 663 de 1993), Ley 964 de 2005, Decreto 2555 de 2010 y Ley 1480 de 2011.
-• Entidades supervisadas y funciones: vigila intermediarios financieros, aseguradoras, pensiones, fiduciarias, intermediarios de valores y conglomerados financieros para preservar la estabilidad, integridad, transparencia y confianza del sistema, proteger al consumidor financiero (incluso con funciones jurisdiccionales), prevenir captaciones ilegales y certificar el interés bancario corriente.
-• Estructura y presupuesto: cuenta con Consejo Asesor, Superintendente Financiero, oficinas asesoras, control interno/disciplinario, dirección jurídica y delegadas especializadas (consumidor financiero, funciones jurisdiccionales, riesgos y emisores/valores); se financia principalmente con contribuciones semestrales de las vigiladas.">
-            Más info aquí
-          </button>
+          <button class="action-btn">Más info aquí</button>
         </article>
       </div>
     </section>
@@ -912,7 +877,7 @@
       <h2 class="layer-title">04 / ENTIDADES TERRITORIALES, SALUD Y COMERCIO</h2>
       <div class="cards-3">
         <!-- 11. SHD -->
-        <article class="flow-card">
+        <article class="flow-card" data-topic="shd">
           <div>
             <div class="flow-card-head">
               <div class="flow-card-main">
@@ -930,20 +895,14 @@
               <span class="format-badge badge-jpeg-lime">JPEG</span>
             </div>
             <p class="flow-summary">
-              Entidad del sector central distrital que dirige y administra la política fiscal y financiera de Bogotá para sostener el funcionamiento y desarrollo de la ciudad[cite: 18].
+              Entidad del sector central de la Administración Distrital encargada de dirigir y administrar la política financiera y fiscal de Bogotá.
             </p>
           </div>
-          <button class="action-btn"
-                  data-title="Secretaría Distrital de Hacienda de Bogotá (SHD)"
-                  data-desc="• Qué es y marco normativo: entidad del sector central de la Administración Distrital encargada de dirigir y administrar la política financiera y fiscal de Bogotá, con hitos en la Constitución de 1991, el Decreto Ley 1421 de 1993 (régimen especial) y el Decreto Distrital 601 de 2014[cite: 18].
-• Funciones y tributos: recauda ingresos e impuestos distritales (predial, vehículos, ICA y delineación urbana), formula y administra el presupuesto, gestiona tesorería y pagos, lleva la contabilidad pública y maneja crédito y planeación financiera[cite: 18].
-• Destino de recursos y modernización: los recursos planeados y administrados se reflejan en educación, salud, movilidad, seguridad e infraestructura (ejecutados por las entidades correspondientes), apoyándose en plataformas como BogData para integrar y modernizar la gestión[cite: 18].">
-            Más info aquí
-          </button>
+          <button class="action-btn">Más info aquí</button>
         </article>
 
         <!-- 12. Secretaría de Salud -->
-        <article class="flow-card">
+        <article class="flow-card" data-topic="salud">
           <div>
             <div class="flow-card-head">
               <div class="flow-card-main">
@@ -960,20 +919,14 @@
               <span class="format-badge badge-zip-coral">1 ZIP</span>
             </div>
             <p class="flow-summary">
-              Orienta la salud pública y la atención en Bogotá bajo el modelo MAS Bienestar, articulando redes hospitalarias, aseguramiento y servicios ciudadanos[cite: 19, 20, 21].
+              Entidad distrital encargada de la salud pública, la atención bajo el modelo MAS Bienestar, la articulación de redes y los servicios de salud en Bogotá.
             </p>
           </div>
-          <button class="action-btn"
-                  data-title="Secretaría Distrital de Salud de Bogotá"
-                  data-desc="• Modelo, historia y marco legal: impulsa el modelo MAS Bienestar (atención primaria social), con trayectoria desde acuerdos distritales históricos (1971, 1990, 2006, 2016) y Decreto 507 de 2013, respaldada por la Ley 100 de 1993, Ley 715 de 2001 y Ley Estatutaria 1751 de 2015[cite: 19].
-• Estructura y funciones: se organiza en el Despacho del Secretario (con subsecretarías de salud pública, servicios de salud y aseguramiento, gestión territorial, planeación y gestión sectorial, y corporativa) y entidades/subredes adscritas (como FFDS y Subredes Norte, Sur, Centro Oriente y Sur Occidente), ejerciendo rectoría en salud pública, aseguramiento del régimen subsidiado, inspección, vigilancia y control sanitario (IVC) y gestión de urgencias (CRUE)[cite: 20].
-• Inversión y servicios: destina recursos a régimen subsidiado, salud pública colectiva e infraestructura hospitalaria, y presta servicios ciudadanos como Línea 123 (ambulancias CRUE), Línea 106 (salud mental 24/7), puntos de vacunación, sellos sanitarios y el observatorio SaluData[cite: 21].">
-            Más info aquí
-          </button>
+          <button class="action-btn">Más info aquí</button>
         </article>
 
         <!-- 13. Cámara de Comercio -->
-        <article class="flow-card">
+        <article class="flow-card" data-topic="camara-comercio">
           <div>
             <div class="flow-card-head">
               <div class="flow-card-main">
@@ -990,16 +943,10 @@
               <span class="format-badge badge-jpeg-lime">JPEG</span>
             </div>
             <p class="flow-summary">
-              Instituciones privadas sin ánimo de lucro de orden legal —vigiladas por Supersociedades y articuladas en Confecámaras— que apoyan empresas, registros y competitividad[cite: 22].
+              Instituciones de orden legal, privadas, gremiales y sin ánimo de lucro, vigiladas por la Superintendencia de Sociedades y agrupadas en Confecámaras.
             </p>
           </div>
-          <button class="action-btn"
-                  data-title="Cámaras de Comercio"
-                  data-desc="• Naturaleza y utilidad: entidades privadas, gremiales y sin ánimo de lucro de orden legal (58 cámaras agrupadas en Confecámaras), bajo vigilancia de la Superintendencia de Sociedades, que brindan identidad legal y formalización a comerciantes, apoyo de información y competitividad al Estado, y confianza y transparencia a la sociedad[cite: 22].
-• Organización, financiación y funciones: cuentan con junta directiva y presidencia ejecutiva (con áreas registral y de competitividad/servicios); se financian con ingresos públicos (matrículas, renovaciones y certificados, con vigilancia de la Contraloría) e ingresos privados (afiliados, servicios especializados, eventos y formación), y administran registros como el RUES, resuelven mecanismos de conflicto, dan fe pública mercantil, certifican costumbre mercantil, realizan estudios económicos y ejercen vocería gremial[cite: 22].
-• Programas y alianzas: impulsan iniciativas como VUE, fábricas de productividad y sostenibilidad, BazzarBog y clústeres sectoriales, además de convenios con entidades y aliados como FNG, ProColombia, ICC y SENA[cite: 22].">
-            Más info aquí
-          </button>
+          <button class="action-btn">Más info aquí</button>
         </article>
       </div>
     </section>
@@ -1034,14 +981,14 @@
     </div>
   </footer>
 
-  <!-- MODAL DE INFORMACIÓN ADICIONAL -->
+  <!-- MODAL ESTRUCTURADO POR SECCIONES -->
   <div id="infoModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
     <div class="modal-panel">
       <div class="modal-top">
         <h3 id="modalHeading">Título</h3>
         <button class="modal-x" id="modalCloseBtn" aria-label="Cerrar">&times;</button>
       </div>
-      <p id="modalDescription" class="modal-desc">Descripción</p>
+      <div id="modalSections" class="modal-sections"></div>
       <div class="modal-btns">
         <button class="btn-cancel" id="modalCancelBtn">Cerrar</button>
       </div>
@@ -1049,29 +996,24 @@
   </div>
 
   <script>
-    const overlay = document.getElementById('infoModal');
-    const heading = document.getElementById('modalHeading');
-    const description = document.getElementById('modalDescription');
-    const closeBtn = document.getElementById('modalCloseBtn');
-    const cancelBtn = document.getElementById('modalCancelBtn');
-
-    document.querySelectorAll('.action-btn').forEach((button) => {
-      button.addEventListener('click', () => {
-        heading.textContent = button.getAttribute('data-title');
-        description.textContent = button.getAttribute('data-desc');
-        overlay.classList.add('active');
-      });
-    });
-
-    function hideModal() {
-      overlay.classList.remove('active');
-    }
-
-    closeBtn.addEventListener('click', hideModal);
-    cancelBtn.addEventListener('click', hideModal);
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) hideModal();
-    });
-  </script>
-</body>
-</html>
+    const topicsData = {
+      "estructura-estado": {
+        title: "Estructura del Estado Colombiano",
+        blocks: [
+          {
+            heading: "Definición y Organización General",
+            text: "Colombia es un Estado Social de Derecho organizado como República unitaria, descentralizada y con autonomía de sus entidades territoriales. Se estructura en las Ramas del Poder Público (Legislativa, Ejecutiva y Judicial), los Órganos de Control, la Organización Electoral y los Órganos Autónomos e Independientes."
+          },
+          {
+            heading: "Marco Normativo y Nodos del Estado",
+            text: "• Constitución Política: Título V (Arts. 113 al 121), Arts. 1, 115, 209 y 288; Títulos VI, VII, VIII, IX y X.\n• Leyes clave: Ley 489 de 1998 (Arts. 5 al 14 y 38–39) y Ley 1454 de 2011 (Ley Orgánica de Ordenamiento Territorial — LOOT).\n• Niveles y entidades: Rama Ejecutiva en orden nacional y territorial (departamental y municipal); ministerios y departamentos administrativos; superintendencias; establecimientos públicos; unidades administrativas especiales (con o sin personería jurídica); agencias del Estado; empresas sociales del Estado (ESE); empresas industriales y comerciales del Estado (EICE); sociedades de economía mixta; empresas de servicios públicos domiciliarios; sociedades públicas, entidades indirectas y entes autónomos (CAR, entes universitarios autónomos, CNSC)."
+          },
+          {
+            heading: "24 Sectores Administrativos",
+            text: "1. Presidencia de la República | 2. Interior | 3. Relaciones Exteriores | 4. Hacienda y Crédito Público | 5. Justicia y del Derecho | 6. Defensa Nacional | 7. Agricultura y Desarrollo Rural | 8. Salud y Protección Social | 9. Trabajo | 10. Minas y Energía | 11. Comercio, Industria y Turismo | 12. Educación Nacional | 13. Ambiente y Desarrollo Sostenible | 14. Vivienda, Ciudad y Territorio | 15. TIC | 16. Transporte | 17. Cultura | 18. Planeación | 19. Inteligencia Estratégica | 20. Función Pública | 21. Estadística | 22. Deporte | 23. Ciencia y Tecnología | 24. Inclusión Social y Reconciliación."
+          },
+          {
+            heading: "Mecanismos de Coordinación",
+            text: "• Principios y regulación: colaboración armónica (Art. 113 C.P.), coordinación de autoridades (Art. 209 C.P.), competencias territoriales (Art. 228 C.P.) y coordinación/colaboración (Art. 6 Ley 489 de 1998).\n• Coordinación estratégica y gubernamental: DAPRE, DNP, Hacienda, CONPES, CONFIS, Consejo de Comercio Exterior, Plan Nacional de Desarrollo, Consejos de Ministros, Sistemas Administrativos Nacionales, Comisiones Intersectoriales y Comités Sectoriales de Desarrollo Administrativo.\n• Acción administrativa: ejercicio directo (Art. 5), delegación (Arts. 9 a 14), desconcentración (Art. 8) y descentralización (política, administrativa —territorial, funcional o por servicios y por colaboración— y fiscal).\n• Principios territoriales: concurrencia, complementariedad y subsidiariedad."
+          }
+        ]
