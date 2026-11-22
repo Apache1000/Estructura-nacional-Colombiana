@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estructura del Estado Colombiano | Portafolio & Diagrama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #101210;
+      --bg-header: #161816;
+      --zone-01: #96d114;       /* Verde lima brillante */
+      --zone-01-border: #b7ef2b;
+      --zone-02: #6f8f1d;       /* Verde oliva */
+      --zone-02-border: #8eb329;
+      --zone-03: #1b1d1b;       /* Carbón oscuro */
+      --zone-03-border: #3a3e3a;
+      --zone-04: #e84836;       /* Coral / rojo */
+      --zone-04-border: #ff6a59;
+      --card-bg: #151715;
+      --card-border: #383c38;
+      --text-light: #f4f6f4;
+      --text-muted: #b3bcb3;
+      --lime-btn: #96d114;
+      --lime-btn-text: #111608;
+      --badge-lime: #a5e01b;
+      --badge-coral: #ff6a59;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.45;
+      overflow-x: hidden;
+    }
+
+    /* TOPBAR */
+    .topbar {
+      background-color: var(--bg-header);
+      border-bottom: 1px solid #262926;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .topbar-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-light);
+      text-decoration: none;
+    }
+
+    .brand-badge {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1.5px solid var(--zone-01);
+      display: grid;
+      place-items: center;
+      color: var(--zone-01);
+      font-size: 0.85rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text-light);
+    }
+
+    .nav-links a.active {
+      border-bottom: 2px solid var(--zone-01);
+      padding-bottom: 3px;
+    }
+
+    /* HERO */
+    .hero {
+      background-color: var(--bg-header);
+      padding: 2.5rem 1.5rem 2.75rem;
+    }
+
+    .hero-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .btn-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--lime-btn);
+      color: var(--lime-btn-text);
+      font-weight: 800;
+      font-size: 0.88rem;
+      padding: 0.65rem 1.15rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .btn-hero:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.07);
+    }
+
+    .hero-graphic svg {
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* CONTENEDOR DE FRANJAS DE COLOR */
+    .layers-wrapper {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 1.25rem 2rem;
+    }
+
+    .color-layer {
+      border-radius: 18px;
+      padding: 1.4rem 1.5rem 1.6rem;
+      position: relative;
+      border: 2px solid transparent;
+    }
+
+    .layer-01 {
+      background-color: var(--zone-01);
+      border-color: var(--zone-01-border);
+      color: #111608;
+    }
+
+    .layer-02 {
+      background-color: var(--zone-02);
+      border-color: var(--zone-02-border);
+      color: #f4f6f4;
+    }
+
+    .layer-03 {
+      background-color: var(--zone-03);
+      border-color: var(--zone-03-border);
+      color: #f4f6f4;
+    }
+
+    .layer-04 {
+      background-color: var(--zone-04);
+      border-color: var(--zone-04-border);
+      color: #fff6f5;
+    }
+
+    .layer-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .layer-01 .layer-title {
+      color: #121807;
+    }
+
+    /* GRIDS DE TARJETAS */
+    .cards-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.3rem;
+    }
+
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.15rem;
+    }
+
+    .cards-5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.85rem;
+    }
+
+    /* TARJETAS OSCURAS INTERNAS */
+    .flow-card {
+      background-color: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 10px;
+      padding: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.8rem;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .flow-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--badge-lime);
+    }
+
+    .flow-card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .flow-card-main {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .flow-icon {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 6px;
+      background-color: #242824;
+      border: 1px solid #444944;
+      display: grid;
+      place-items: center;
+      color: var(--badge-lime);
+    }
+
+    .flow-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .flow-name {
+      font-size: 0.84rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1.18;
+      color: var(--text-light);
+    }
+
+    .flow-sub {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    /* BADGES DE FORMATO */
+    .format-badge {
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 0.14rem 0.42rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .badge-pdf-lime {
+      background-color: var(--badge-lime);
+      color: #111608;
+    }
+
+    .badge-jpeg-lime {
+      background-color: var(--badge-lime);
+      color: #111608;
+    }
+
+    .badge-zip-coral {
+      background-color: var(--badge-coral);
+      color: #ffffff;
+    }
+
+    /* BOTONES DE ACCIÓN */
+    .action-btn {
+      width: 100%;
+      padding: 0.45rem 0.65rem;
+      border-radius: 5px;
+      border: 1px solid #525852;
+      background-color: #1d201d;
+      color: var(--text-light);
+      font-family: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .action-btn:hover {
+      background-color: var(--badge-lime);
+      color: #111608;
+      border-color: var(--badge-lime);
+    }
+
+    /* CONECTORES SVG ENTRE FRANJAS */
+    .bridge-connector {
+      width: 100%;
+      height: 46px;
+      display: block;
+      overflow: visible;
+    }
+
+    .bridge-line {
+      fill: none;
+      stroke: #141714;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .bridge-line-light {
+      fill: none;
+      stroke: #dce3dc;
+      stroke-width: 2.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* FOOTER ESTILO PORTAFOLIO */
+    .portfolio-footer {
+      max-width: 1060px;
+      margin: 1rem auto 2.5rem;
+      padding: 0 1.25rem;
+    }
+
+    .footer-card {
+      background-color: var(--bg-header);
+      border: 1.5px solid #2d322d;
+      border-radius: 14px;
+      padding: 1.4rem 1.6rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .footer-block h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .footer-block p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .social-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-dot {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: #252925;
+      color: var(--text-light);
+      display: grid;
+      place-items: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .github-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: #232723;
+      border: 1px solid #495049;
+      color: var(--text-light);
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .github-pill-btn:hover {
+      border-color: var(--zone-01);
+      background-color: #2c312c;
+    }
+
+    /* MODAL */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 7, 5, 0.82);
+      display: none;
+      place-items: center;
+      padding: 1.25rem;
+      z-index: 999;
+    }
+
+    .modal-overlay.active {
+      display: grid;
+    }
+
+    .modal-panel {
+      background-color: #191c19;
+      border: 2px solid var(--zone-01);
+      border-radius: 14px;
+      max-width: 500px;
+      width: 100%;
+      padding: 1.5rem;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.9rem;
+    }
+
+    .modal-top h3 {
+      font-size: 1.1rem;
+      color: var(--zone-01);
+    }
+
+    .modal-x {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .modal-desc {
+      font-size: 0.92rem;
+      color: var(--text-light);
+      margin-bottom: 1.2rem;
+    }
+
+    .modal-file-path {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      background-color: #111311;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #2b302b;
+      margin-bottom: 1.2rem;
+      word-break: break-all;
+    }
+
+    .modal-btns {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.7rem;
+    }
+
+    .btn-cancel {
+      background-color: #272b27;
+      color: var(--text-light);
+      border: 1px solid #444a44;
+      padding: 0.55rem 0.95rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-open-file {
+      background-color: var(--zone-01);
+      color: #111608;
+      border: none;
+      padding: 0.55rem 1.05rem;
+      border-radius: 6px;
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 0.88rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1020px) {
+      .cards-5 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 780px) {
+      .hero-inner,
+      .cards-2,
+      .cards-3,
+      .cards-5,
+      .footer-card {
+        grid-template-columns: 1fr;
+      }
+
+      .bridge-connector {
+        height: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="#inicio" class="brand">
+        <span class="brand-badge">✦</span>
+        <span>Portafolio Estatal</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#diagrama" class="active">Diagrama</a></li>
+        <li><a href="#bloque-04">Recursos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO CON GRÁFICO TÉCNICO -->
+  <section id="inicio" class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>Estructura del Estado Colombiano</h1>
+        <p>Diagrama de Flujo &amp; Portafolio de Diseño &bull; Versión Interactiva</p>
+        <a href="#diagrama" class="btn-hero">Ver Diagrama Completo</a>
+      </div>
+
+      <div class="hero-graphic" aria-hidden="true">
+        <svg viewBox="0 0 340 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Hoja de plano técnico -->
+          <rect x="75" y="18" width="185" height="195" rx="6" fill="#232823" stroke="#7d8c7d" stroke-width="2"/>
+          <!-- Cajas del diagrama dentro del plano -->
+          <rect x="148" y="42" width="44" height="22" rx="3" fill="#96d114"/>
+          <rect x="105" y="95" width="44" height="22" rx="3" fill="#dfe6df"/>
+          <rect x="186" y="95" width="44" height="22" rx="3" fill="#dfe6df"/>
+          <rect x="148" y="148" width="44" height="22" rx="3" fill="#6f8f1d"/>
+          <!-- Líneas conectoras internas -->
+          <path d="M170 64 V80 H127 V95 M170 80 H208 V95 M127 117 V132 H170 V148 M208 117 V132 H170" stroke="#96d114" stroke-width="2"/>
+          <!-- Escuadra inferior derecha -->
+          <polygon points="150,215 295,215 295,70" fill="#cfd6cf" stroke="#161816" stroke-width="2.5"/>
+          <polygon points="198,192 272,192 272,118" fill="#161816"/>
+          <!-- Compás superior derecho -->
+          <g transform="translate(232, 10)">
+            <circle cx="28" cy="14" r="6" fill="#161816" stroke="#cfd6cf" stroke-width="2.5"/>
+            <line x1="25" y1="20" x2="10" y2="74" stroke="#cfd6cf" stroke-width="3" stroke-linecap="round"/>
+            <line x1="31" y1="20" x2="46" y2="74" stroke="#cfd6cf" stroke-width="3" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIONES DE COLOR EN CAPAS -->
+  <main id="diagrama" class="layers-wrapper">
+
+    <!-- 01 / BASE Y FUNDAMENTOS DEL ESTADO (VERDE LIMA) -->
+    <section class="color-layer layer-01">
+      <h2 class="layer-title">01 / BASE Y FUNDAMENTOS DEL ESTADO</h2>
+      <div class="cards-2">
+        <!-- 1. Estructura del Estado -->
+        <article class="flow-card">
+          <div class="flow-card-head">
+            <div class="flow-card-main">
+              <div class="flow-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="3" width="6" height="4" rx="1"/>
+                  <rect x="3" y="16" width="5" height="4" rx="1"/>
+                  <rect x="10" y="16" width="4" height="4" rx="1"/>
+                  <rect x="16" y="16" width="5" height="4" rx="1"/>
+                  <path d="M12 7v4M5.5 16v-3h13v3M12 11v5"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="flow-name">Estructura del Estado</h3>
+                <p class="flow-sub">Organización y ramas</p>
+              </div>
+            </div>
+            <span class="format-badge badge-pdf-lime">PDF</span>
+          </div>
+          <button class="action-btn"
+                  data-title="Estructura del Estado (PDF)"
+                  data-desc="Documento sobre la organización del Estado Colombiano, ramas del poder público y estructura institucional."
+                  data-file="recursos/estructura-del-estado.pdf"
+                  data-type="PDF">
+            Ver Info / PDF
+          </button>
+        </article>
+
+        <!-- 2. Elementos del Estado -->
+        <article class="flow-card">
+          <div class="flow-card-head">
+            <div class="flow-card-main">
+              <div class="flow-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="7" r="3"/>
+                  <circle cx="6" cy="17" r="3"/>
+                  <circle cx="18" cy="17" r="3"/>
+                  <path d="M10.5 9.5L7.5 14.5M13.5 9.5l3 5M9 17h6"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="flow-name">Elementos del Estado</h3>
+                <p class="flow-sub">Población, territorio y poder</p>
+              </div>
+            </div>
+            <span class="format-badge badge-pdf-lime">PDF</span>
+          </div>
+          <button class="action-btn"
+                  data-title="Elementos del Estado (PDF)"
+                  data-desc="Descripción de los elementos esenciales que conforman el Estado y sus fundamentos jurídicos."
+                  data-file="recursos/elementos-del-estado.pdf"
+                  data-type="PDF">
+            Ver Info / PDF
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONECTOR 01 -> 02 -->
+    <svg class="bridge-connector" viewBox="0 0 1000 46" preserveAspectRatio="none">
+      <path class="bridge-line" d="M 250 0 L 250 24 L 460 24 L 460 44" />
+      <path class="bridge-line" d="M 750 0 L 750 24 L 540 24 L 540 44" />
+      <polyline class="bridge-line" points="452,36 460,44 468,36" />
+      <polyline class="bridge-line" points="532,36 540,44 548,36" />
+    </svg>
+
+    <!-- 02 / ÓRGANOS Y ORGANISMOS DE CONTROL (VERDE OLIVA) -->
+    <section class="color-layer layer-02">
+      <h2 class="layer-title">02 / ÓRGANOS Y ORGANISMOS DE CONTROL</h2>
+      <div class="cards-3">
+        <!-- 3. Órganos de Control -->
+        <article class="flow-card">
+          <div class="flow-card-head">
+            <div class="flow-card-main">
+              <div class="flow-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3L4 7v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V7l-8-4z"/>
+                  <path d="M9 12l2 2 4-4"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="flow-name">Órganos de Control</h3>
+                <p class="flow-sub">Vigilancia y ministerio público</p>
+              </div>
+            </div>
+            <span class="format-badge badge-pdf-lime">PDF</span>
+          </div>
+          <button class="action-btn"
+                  data-title="Órganos de Control (PDF)"
+                  data-desc="Información sobre los órganos de control y su función de vigilancia sobre la gestión pública."
+                  data-file="recursos/organos-de-control.pdf"
+                  data-type="PDF">
+            Ver Info / PDF
+          </button>
+        </article>
+
+        <!-- 4. Organismos de Control -->
+        <article class="flow-card">
+          <div class="flow-card-head">
+            <div class="flow-card-main">
+              <div class="flow-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2"/>
+                  <path d="M8 9h8M8 13h8M8 17h5"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="flow-name">Organismos de Control</h3>
+                <p class="flow-sub">Competencias y autonomía</p>
+              </div>
+            </div>
+            <span class="format-badge badge-pdf-lime">PDF</span>
+          </div>
+          <button class="action-btn"
+                  data-title="Organismos de Control (PDF)"
+                  data-desc="Detalle sobre los organismos de control autónomos y su rol en la transparencia institucional."
+                  data-file="recursos/organismode-control.pdf"
+                  data-type="PDF">
+            Ver Info / PDF
+          </button>
+        </article>
+
+        <!-- 5. Contraloría -->
+        <article class="flow-card">
+          <div class="flow-card-head">
+            <div class="flow-card-main">
+              <div class="flow-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="7"/>
+                  <path d="M20 20l-4-4"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="flow-name">Contraloría</h3>
+                <p class="flow-sub">Control fiscal nacional</p>
+              </div>
+            </div>
+            <span class="format-badge badge-pdf-lime">PDF</span>
+          </div>
+          <button class="action-btn"
+                  data-title="Contraloría (PDF)"
+                  data-desc="Documento sobre las funciones de control fiscal y auditoría de los recursos del Estado."
+                  data-file="recursos/contraloria.pdf"
+                  data-type="PDF">
+            Ver Info / PDF
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONECTOR 02 -> 03 -->
+    <svg class="bridge-connector" viewBox="0 0 1000 46" preserveAspectRatio="none">
+      <path class="bridge-line-light" d="M 166 0 L 166 24 L 460 24 L 460 44" />
+      <path class="bridge-line-light" d="M 500 0 L 500 44" />
+      <path class="bridge-line-light" d="M 834 0 L 834 24 L 540 24 L 540 44" />
+      <polyline class="bridge-line-light" points="452,36 460,44 468,36" />
+      <polyline class="bridge-line-light" points="492,36 500,44 508,36" />
+      <polyline class="bridge-line-light" points="532,36 540,44 548,36" />
+    </svg>
+
+    <!-- 03 / MINISTERIOS Y ENTIDADES NACIONALES (CARBÓN OSCURO) -->
+    <section class="color-layer layer-03">
+      <h2 class="layer-title">03 / MINISTERIOS Y ENTIDADES NACIONALES</h2>
+      <div class="cards-5">
+        <!-- 6. Ministerio de Comercio -->
+        <article class="flow-card">
+          <div class="flow-card-head">
+            <div class="flow-card-main">
+              <div>
+                <h3 class="flow-name">Ministerio de Comercio</h3>
+                <p class="flow-sub">Comercio e industria</p>
+              </div>
+            </div>
+            <span class="format-badge badge-pdf-lime">PDF</span>
+          </div>
+          <button class="action-btn"
+                  data-title="Ministerio de Comercio (PDF)"
+                  data-desc="Información sobre el Ministerio de Comercio, Industria y Turismo y sus políticas sectoriales."
+                  data-file="recursos/ministerio-de-comercio.pdf"
+                  data-type="PDF">
+            Ver Info / PDF
+          </button>
+        </article>
+
+        <!-- 7. DIAN -->
+        <article class="flow-card">
+          <div class="flow-card-head">
+            <div class="flow-card-main">
+              <div>
+                <h3 class="flow-name">DIAN</h3>
+                <p class="flow-sub">Impuestos y aduanas</p>
+              </div>
+            </div>
+            <span class="format-badge badge-pdf-lime">PDF</span>
+          </div>
+          <button class="action-btn"
+                  data-title="DIAN (PDF)"
+                  data-desc="Documento sobre la Dirección de Impuestos y Aduanas Nacionales y sus competencias."
+                  data-file="recursos/dian.pdf"
+                  data-type="PDF">
+            Ver Info / PDF
+          </button>
+        </article>
+
+        <!-- 8. INVIMA -->
+        <article class="flow-card">
+          <div class="flow-card-head">
+            <div class="flow-card-main">
+              <div>
+                <h3 class="flow-name">INVIMA</h3>
+                <p class="flow-sub">Vigilancia sanitaria</p>
+              </div>
+            </div>
+            <span class="format-badge badge-pdf-lime">PDF</span>
+          </div>
+          <button class="action-btn"
+                  data-title="INVIMA (PDF)"
+                  data-desc="Guía sobre el Instituto Nacional de Vigilancia de Medicamentos y Alimentos."
+                  data-file="recursos/invima.pdf"
+                  data-type="PDF">
+            Ver Info / PDF
+          </button>
+        </article>
+
+        <!-- 9. Superintendencia de Sociedades -->
+        <article class="flow-card">
+          <div class="flow-card-head">
+            <div class="flow-card-main">
+              <div>
+                <h3 class="flow-name">Superintendencia de Sociedades</h3>
+                <p class="flow-sub">Supervisión societaria</p>
+              </div>
+            </div>
+            <span class="format-badge badge-pdf-lime">PDF</span>
+          </div>
+          <button class="action-btn"
+                  data-title="Superintendencia de Sociedades (PDF)"
+                  data-desc="Información sobre inspección, vigilancia y control de sociedades comerciales."
+                  data-file="recursos/superintendencia-de-sociedades.pdf"
+                  data-type="PDF">
+            Ver Info / PDF
+          </button>
+        </article>
+
+        <!-- 10. Superintendencia Financiera -->
+        <article class="flow-card">
+          <div class="flow-card-head">
+            <div class="flow-card-main">
+              <div>
+                <h3 class="flow-name">Superintendencia Financiera</h3>
+                <p class="flow-sub">Sistema financiero</p>
+              </div>
+            </div>
+            <span class="format-badge badge-pdf-lime">PDF</span>
+          </div>
+          <button class="action-btn"
+                  data-title="Superintendencia Financiera (PDF)"
+                  data-desc="Documento sobre la supervisión del sistema financiero y mercados en Colombia."
+                  data-file="recursos/superintendencia-financiera.pdf"
+                  data-type="PDF">
+            Ver Info / PDF
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONECTOR 03 -> 04 -->
+    <svg class="bridge-connector" viewBox="0 0 1000 46" preserveAspectRatio="none">
+      <path class="bridge-line-light" d="M 100 0 L 100 24 L 460 24 L 460 44" />
+      <path class="bridge-line-light" d="M 500 0 L 500 44" />
+      <path class="bridge-line-light" d="M 900 0 L 900 24 L 540 24 L 540 44" />
+      <polyline class="bridge-line-light" points="452,36 460,44 468,36" />
+      <polyline class="bridge-line-light" points="492,36 500,44 508,36" />
+      <polyline class="bridge-line-light" points="532,36 540,44 548,36" />
+    </svg>
+
+    <!-- 04 / ENTIDADES TERRITORIALES, SALUD Y COMERCIO (CORAL / ROJO) -->
+    <section id="bloque-04" class="color-layer layer-04">
+      <h2 class="layer-title">04 / ENTIDADES TERRITORIALES, SALUD Y COMERCIO</h2>
+      <div class="cards-3">
+        <!-- 11. SHD -->
+        <article class="flow-card">
+          <div class="flow-card-head">
+            <div class="flow-card-main">
+              <div class="flow-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="3" width="16" height="18" rx="2"/>
+                  <path d="M8 7h2M14 7h2M8 11h2M14 11h2M9 21v-5h6v5"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="flow-name">SHD</h3>
+                <p class="flow-sub">Secretaría de Hacienda Distrital</p>
+              </div>
+            </div>
+            <span class="format-badge badge-jpeg-lime">JPEG</span>
+          </div>
+          <button class="action-btn"
+                  data-title="SHD - Secretaría de Hacienda Distrital (JPEG)"
+                  data-desc="Imagen de referencia sobre la Secretaría de Hacienda Distrital."
+                  data-file="recursos/shd.jpg"
+                  data-type="JPEG">
+            Ver Imagen / JPEG
+          </button>
+        </article>
+
+        <!-- 12. Secretaría de Salud -->
+        <article class="flow-card">
+          <div class="flow-card-head">
+            <div class="flow-card-main">
+              <div class="flow-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#ff6a59" stroke-width="2.5">
+                  <path d="M12 5v14M5 12h14"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="flow-name">Secretaría de Salud</h3>
+                <p class="flow-sub">Archivo comprimido</p>
+              </div>
+            </div>
+            <span class="format-badge badge-zip-coral">1 ZIP</span>
+          </div>
+          <button class="action-btn"
+                  data-title="Secretaría de Salud (ZIP)"
+                  data-desc="Paquete ZIP con los archivos de información de la Secretaría de Salud."
+                  data-file="recursos/secretaria-de-salud.zip"
+                  data-type="ZIP">
+            Descargar ZIP
+          </button>
+        </article>
+
+        <!-- 13. Cámara de Comercio -->
+        <article class="flow-card">
+          <div class="flow-card-head">
+            <div class="flow-card-main">
+              <div class="flow-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 21h18M4 10h16M6 10v11M18 10v11M10 10v11M14 10v11M12 3l9 7H3l9-7z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="flow-name">Cámara de Comercio</h3>
+                <p class="flow-sub">Registro y apoyo empresarial</p>
+              </div>
+            </div>
+            <span class="format-badge badge-jpeg-lime">JPEG</span>
+          </div>
+          <button class="action-btn"
+                  data-title="Cámara de Comercio (JPEG)"
+                  data-desc="Imagen de referencia sobre funciones de la Cámara de Comercio."
+                  data-file="recursos/camara-de-comercio.jpg"
+                  data-type="JPEG">
+            Ver Imagen / JPEG
+          </button>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contacto" class="portfolio-footer">
+    <div class="footer-card">
+      <div class="footer-block">
+        <h4>Diseño Gráfico</h4>
+        <p>Diagrama &amp; Portafolio Interactivo</p>
+        <div class="social-row">
+          <a href="#inicio" class="social-dot">Bē</a>
+          <a href="#diagrama" class="social-dot">◎</a>
+          <a href="#contacto" class="social-dot">in</a>
+        </div>
+      </div>
+
+      <div class="footer-block">
+        <h4>Portafolio</h4>
+        <p>Estructura del Estado Colombiano</p>
+        <p>Recursos PDF, JPEG y ZIP</p>
+      </div>
+
+      <div class="footer-block">
+        <a href="https://github.com" target="_blank" rel="noopener" class="github-pill-btn">
+          <span>&#9741;</span>
+          <span>Ver Repositorio GitHub</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL DE INFORMACIÓN ADICIONAL -->
+  <div id="infoModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-panel">
+      <div class="modal-top">
+        <h3 id="modalHeading">Título</h3>
+        <button class="modal-x" id="modalCloseBtn" aria-label="Cerrar">&times;</button>
+      </div>
+      <p id="modalDescription" class="modal-desc">Descripción</p>
+      <div id="modalFilePath" class="modal-file-path">recursos/archivo.pdf</div>
+      <div class="modal-btns">
+        <button class="btn-cancel" id="modalCancelBtn">Cerrar</button>
+        <a id="modalActionLink" href="#" target="_blank" rel="noopener" class="btn-open-file">Abrir Archivo</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const overlay = document.getElementById('infoModal');
+    const heading = document.getElementById('modalHeading');
+    const description = document.getElementById('modalDescription');
+    const filePathBox = document.getElementById('modalFilePath');
+    const actionLink = document.getElementById('modalActionLink');
+    const closeBtn = document.getElementById('modalCloseBtn');
+    const cancelBtn = document.getElementById('modalCancelBtn');
+
+    document.querySelectorAll('.action-btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        const title = button.getAttribute('data-title');
+        const desc = button.getAttribute('data-desc');
+        const file = button.getAttribute('data-file');
+        const type = button.getAttribute('data-type');
+
+        heading.textContent = title;
+        description.textContent = desc;
+        filePathBox.textContent = `Ruta del archivo: ${file}`;
+        actionLink.href = file;
+        actionLink.textContent = type === 'ZIP' ? 'Descargar ZIP' : `Abrir ${type}`;
+        overlay.classList.add('active');
+      });
+    });
+
+    function hideModal() {
+      overlay.classList.remove('active');
+    }
+
+    closeBtn.addEventListener('click', hideModal);
+    cancelBtn.addEventListener('click', hideModal);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) hideModal();
+    });
+  </script>
+</body>
+</html>
